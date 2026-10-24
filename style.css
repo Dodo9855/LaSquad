@@ -1,12 +1,15 @@
 :root {
-  --bg: #0f1117;
-  --bg-soft: #171a23;
-  --card: #1d2130;
-  --border: #2a2f42;
-  --text: #e9ebf3;
-  --muted: #a3a9bf;
-  --accent: #5865f2;
-  --accent-hover: #4752c4;
+  /* Charte La Squad : noir nuit, violet, flamme */
+  --bg: #0b0912;
+  --bg-soft: #15101f;
+  --card: #1c1529;
+  --border: #2e2342;
+  --text: #f1edf9;
+  --muted: #b3a8c9;
+  --accent: #7c3aed;
+  --accent-hover: #6d28d9;
+  --lavender: #c084fc;
+  --flame: linear-gradient(135deg, #ffb020, #ff4d1a);
   --green: #3ba55d;
   --radius: 14px;
   --max: 1080px;
@@ -14,12 +17,12 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg: #f6f7fb;
+    --bg: #f7f5fc;
     --bg-soft: #ffffff;
     --card: #ffffff;
-    --border: #e1e4ee;
-    --text: #1a1d29;
-    --muted: #5b6178;
+    --border: #e4dcf3;
+    --text: #1b1528;
+    --muted: #5e5476;
   }
 }
 
@@ -134,3 +137,16 @@ footer a { color: var(--muted); margin-right: 16px; }
 .narrow { max-width: 780px; }
 .legal table { table-layout: fixed; }
 .legal th, .legal td { overflow-wrap: anywhere; }
+
+/* --- Charte graphique --- */
+.logo { display: inline-flex; align-items: center; }
+.logo img { width: 34px; height: 34px; border-radius: 9px; margin-right: 10px; }
+.logo span { margin-left: .25em; }
+.logo span, .hero h1 em { background: var(--flame); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero { background: radial-gradient(60% 70% at 50% 0%, rgba(124, 58, 237, .28), transparent 70%); }
+.hero-emblem { width: min(300px, 70vw); height: auto; display: block; margin: 0 auto 18px; filter: drop-shadow(0 18px 40px rgba(124, 58, 237, .35)); }
+.badge { border-color: var(--accent); color: var(--lavender); }
+.btn { background: var(--accent); box-shadow: 0 8px 24px rgba(124, 58, 237, .35); }
+.btn.ghost { background: transparent; box-shadow: none; }
+.step::before { background: var(--flame); }
+.demo .embed { border-left-color: var(--accent); }
