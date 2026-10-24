@@ -16,14 +16,14 @@
 <body>
   <header class="top">
     <div class="wrap">
-      <a class="logo" href="index.html"><img src="logo-96.png" alt="" width="34" height="34">La<span>Squad</span></a>
+      <a class="logo" href="index.html"><img src="img/logo-96.png" alt="" width="34" height="34">La<span>Squad</span></a>
       <nav><a href="cgu.html">CGU</a><a href="index.html">Accueil</a></nav>
     </div>
   </header>
 
   <main class="legal">
     <h1>Politique de confidentialité</h1>
-    <p class="updated">Dernière mise à jour : 25 octobre 2026</p>
+    <p class="updated">Dernière mise à jour : 24 octobre 2026</p>
 
     <p class="note">
       En résumé : La Squad utilise uniquement ce dont il a besoin pour trouver des jeux en commun
@@ -41,17 +41,17 @@
     <table>
       <tr><th>Donnée</th><th>Quand</th><th>Pourquoi</th></tr>
       <tr><td>Identifiant Discord (numéro de compte)</td><td>Dès que tu enregistres des jeux ou t'inscris à une soirée</td><td>Associer tes jeux à ton compte Discord</td></tr>
-      <tr><td>Identifiant Steam (SteamID64) et pseudo Steam</td><td>Avec <code>/lier-steam</code></td><td>Lire ta bibliothèque Steam</td></tr>
-      <tr><td>Liste de tes jeux Steam et temps de jeu</td><td>Avec <code>/lier-steam</code>, puis mise à jour toutes les 12 h environ quand tu utilises le bot</td><td>Trouver les jeux en commun et les trier</td></tr>
-      <tr><td>Abonnement Game Pass (oui / non)</td><td>Avec <code>/gamepass</code></td><td>Compter les jeux du Game Pass comme les tiens</td></tr>
-      <tr><td>Jeux ajoutés à la main et leur plateforme</td><td>Avec <code>/jeu-ajouter</code></td><td>Compter tes jeux hors Steam</td></tr>
+      <tr><td>Identifiant Steam (SteamID64) et pseudo Steam</td><td>Quand tu relies ton Steam dans <code>/mes-jeux</code></td><td>Lire ta bibliothèque Steam</td></tr>
+      <tr><td>Liste de tes jeux Steam et temps de jeu</td><td>Quand tu relies ton Steam dans <code>/mes-jeux</code>, puis mise à jour toutes les 12 h environ quand tu utilises le bot</td><td>Trouver les jeux en commun et les trier</td></tr>
+      <tr><td>Abonnement Game Pass (oui / non)</td><td>Avec le bouton Game Pass de <code>/mes-jeux</code></td><td>Compter les jeux du Game Pass comme les tiens</td></tr>
+      <tr><td>Jeux ajoutés à la main et leur plateforme</td><td>Avec <code>/mes-jeux</code> (ajout un par un ou import d'une liste)</td><td>Compter tes jeux hors Steam</td></tr>
       <tr><td>Soirées : serveur, salon, message, jeu, date, organisateur, réponses des participants</td><td>Avec <code>/soiree</code> et ses boutons</td><td>Afficher les inscrits et envoyer le rappel</td></tr>
-      <tr><td>Votes</td><td>Avec <code>/vote</code></td><td>Compter les voix. Gardés uniquement en mémoire pendant le vote (14 minutes maximum), jamais enregistrés</td></tr>
+      <tr><td>Votes</td><td>Avec <code>/vote</code> ou un bouton « Lancer un vote »</td><td>Compter les voix. Gardés uniquement en mémoire pendant le vote (14 minutes maximum), jamais enregistrés</td></tr>
       <tr><td>Activité sur un serveur : identifiant du serveur, ton identifiant Discord, date de ta dernière utilisation du bot</td><td>Quand tu utilises une commande, ou quand tu es dans le salon vocal d'une recherche</td><td>Savoir quels membres actifs prendre en compte pour les alertes promo du serveur</td></tr>
-      <tr><td>Réglages d'un serveur (salon des alertes, réduction minimum) et promos déjà annoncées</td><td>Avec <code>/alertes</code> (administrateurs)</td><td>Publier les promos sans répéter les mêmes. Aucune donnée personnelle</td></tr>
-      <tr><td>Parties jouées (jeu, date, serveur, participants)</td><td>Avec <code>/on-a-joue</code> ou le bouton « On y joue ! »</td><td>Afficher l'historique de la squad et la date de la dernière partie</td></tr>
-      <tr><td>Tes notes de jeux (1 à 5)</td><td>Avec <code>/noter</code> ou <code>/on-a-joue</code></td><td>Afficher la note moyenne de la squad et améliorer les recommandations</td></tr>
-      <tr><td>Ton avis sur le nombre maximum de joueurs d'un jeu</td><td>Avec <code>/joueurs-max</code></td><td>Calculer le nombre de places (valeur médiane des avis, anonyme)</td></tr>
+      <tr><td>Réglages d'un serveur (salons, rôles à mentionner, réduction minimum, délai du rappel, durée des votes, jeux par page, rôle autorisé…) et promos déjà annoncées</td><td>Avec <code>/reglages</code> (administrateurs)</td><td>Appliquer les choix des admins et publier les promos sans répéter les mêmes. Aucune donnée personnelle</td></tr>
+      <tr><td>Parties jouées (jeu, date, serveur, participants)</td><td>Avec <code>/historique</code> (« On a joué à… ») ou le bouton « On y joue ! »</td><td>Afficher l'historique de la squad et la date de la dernière partie</td></tr>
+      <tr><td>Tes notes de jeux (1 à 5)</td><td>Avec <code>/historique</code> (« Noter un jeu »)</td><td>Afficher la note moyenne de la squad et améliorer les recommandations</td></tr>
+      <tr><td>Ton avis sur le nombre maximum de joueurs d'un jeu</td><td>Avec <code>/historique</code> (« Corriger le nombre de joueurs »)</td><td>Calculer le nombre de places (valeur médiane des avis, anonyme)</td></tr>
       <tr><td>Commandes utilisées sur un serveur (serveur, ton identifiant, nom de la commande, date)</td><td>À chaque commande sur un serveur</td><td>Récap mensuel « Wrapped » du serveur (ex. « le plus actif sur le bot »)</td></tr>
       <tr><td>Nombre total d'utilisations de chaque commande</td><td>À chaque commande</td><td>Statistiques globales et anonymes, pour améliorer le bot. Personne n'est identifié</td></tr>
     </table>
@@ -76,7 +76,7 @@
     <h2>4. Combien de temps sont-elles gardées ?</h2>
     <ul>
       <li>Compte Steam, bibliothèque, Game Pass, jeux ajoutés : <strong>jusqu'à ce que tu les supprimes</strong>
-        (<code>/delier-steam</code>, <code>/jeu-retirer</code>, <code>/gamepass</code> ou <code>/supprimer-mes-donnees</code>).</li>
+        (dans <code>/mes-jeux</code>, ou d'un coup avec <code>/supprimer-mes-donnees</code>).</li>
       <li>Soirées et inscriptions : supprimées automatiquement <strong>48 heures</strong> après la date de la soirée.</li>
       <li>Votes : jamais enregistrés.</li>
       <li>Commandes utilisées sur un serveur : supprimées automatiquement après 13 mois.</li>
@@ -109,8 +109,8 @@
     <p>Conformément au RGPD, tu peux à tout moment :</p>
     <ul>
       <li><strong>Effacer</strong> toutes tes données, immédiatement : <code>/supprimer-mes-donnees</code> ;</li>
-      <li><strong>Consulter</strong> ce que le bot sait de toi : <code>/profil</code> ;</li>
-      <li><strong>Corriger</strong> tes données : <code>/actualiser</code>, <code>/jeu-ajouter</code>, <code>/jeu-retirer</code>, <code>/gamepass</code> ;</li>
+      <li><strong>Consulter</strong> ce que le bot sait de toi : <code>/mes-jeux</code> ou <code>/profil</code> ;</li>
+      <li><strong>Corriger</strong> tes données : <code>/mes-jeux</code> (actualiser Steam, ajouter ou retirer un jeu, Game Pass) ;</li>
       <li>Demander une <strong>copie</strong> de tes données, t'<strong>opposer</strong> à un traitement ou poser une question : écris à <strong><a href="mailto:support.lasquad@gmail.com">support.lasquad@gmail.com</a></strong> (réponse sous 30 jours maximum).</li>
     </ul>
     <p>
