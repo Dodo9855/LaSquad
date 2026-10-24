@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Politique de confidentialité — La Squad</title>
+  <meta name="description" content="Quelles données le bot Discord La Squad utilise, pourquoi, combien de temps, et comment les supprimer.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="logo" href="index.html">🎮 La <span>Squad</span></a>
+      <nav><a href="cgu.html">CGU</a><a href="index.html">Accueil</a></nav>
+    </div>
+  </header>
+
+  <main class="legal">
+    <h1>Politique de confidentialité</h1>
+    <p class="updated">Dernière mise à jour : 25 octobre 2026</p>
+
+    <p class="note">
+      En résumé : La Squad utilise uniquement ce dont il a besoin pour trouver des jeux en commun
+      (ton identifiant Discord, ton profil Steam public et les jeux que tu déclares). Rien n'est
+      revendu. Tu peux tout effacer à tout moment avec la commande <code>/supprimer-mes-donnees</code>.
+    </p>
+
+    <h2>1. Qui est responsable de tes données ?</h2>
+    <p>
+      Le responsable du traitement est <strong>[TON NOM OU PSEUDO]</strong>, éditeur du bot Discord
+      « La Squad ». Contact : <strong>[TON ADRESSE E-MAIL]</strong>.
+    </p>
+
+    <h2>2. Quelles données sont utilisées ?</h2>
+    <table>
+      <tr><th>Donnée</th><th>Quand</th><th>Pourquoi</th></tr>
+      <tr><td>Identifiant Discord (numéro de compte)</td><td>Dès que tu enregistres des jeux ou t'inscris à une soirée</td><td>Associer tes jeux à ton compte Discord</td></tr>
+      <tr><td>Identifiant Steam (SteamID64) et pseudo Steam</td><td>Avec <code>/lier-steam</code></td><td>Lire ta bibliothèque Steam</td></tr>
+      <tr><td>Liste de tes jeux Steam et temps de jeu</td><td>Avec <code>/lier-steam</code>, puis mise à jour toutes les 12 h environ quand tu utilises le bot</td><td>Trouver les jeux en commun et les trier</td></tr>
+      <tr><td>Abonnement Game Pass (oui / non)</td><td>Avec <code>/gamepass</code></td><td>Compter les jeux du Game Pass comme les tiens</td></tr>
+      <tr><td>Jeux ajoutés à la main et leur plateforme</td><td>Avec <code>/jeu-ajouter</code></td><td>Compter tes jeux hors Steam</td></tr>
+      <tr><td>Soirées : serveur, salon, message, jeu, date, organisateur, réponses des participants</td><td>Avec <code>/soiree</code> et ses boutons</td><td>Afficher les inscrits et envoyer le rappel</td></tr>
+      <tr><td>Votes</td><td>Avec <code>/vote</code></td><td>Compter les voix. Gardés uniquement en mémoire pendant le vote (14 minutes maximum), jamais enregistrés</td></tr>
+      <tr><td>Activité sur un serveur : identifiant du serveur, ton identifiant Discord, date de ta dernière utilisation du bot</td><td>Quand tu utilises une commande, ou quand tu es dans le salon vocal d'une recherche</td><td>Savoir quels membres actifs prendre en compte pour les alertes promo du serveur</td></tr>
+      <tr><td>Réglages d'un serveur (salon des alertes, réduction minimum) et promos déjà annoncées</td><td>Avec <code>/alertes</code> (administrateurs)</td><td>Publier les promos sans répéter les mêmes. Aucune donnée personnelle</td></tr>
+      <tr><td>Parties jouées (jeu, date, serveur, participants)</td><td>Avec <code>/on-a-joue</code> ou le bouton « On y joue ! »</td><td>Afficher l'historique de la squad et la date de la dernière partie</td></tr>
+      <tr><td>Tes notes de jeux (1 à 5)</td><td>Avec <code>/noter</code> ou <code>/on-a-joue</code></td><td>Afficher la note moyenne de la squad et améliorer les recommandations</td></tr>
+      <tr><td>Ton avis sur le nombre maximum de joueurs d'un jeu</td><td>Avec <code>/joueurs-max</code></td><td>Calculer le nombre de places (valeur médiane des avis, anonyme)</td></tr>
+      <tr><td>Commandes utilisées sur un serveur (serveur, ton identifiant, nom de la commande, date)</td><td>À chaque commande sur un serveur</td><td>Récap mensuel « Wrapped » du serveur (ex. « le plus actif sur le bot »)</td></tr>
+      <tr><td>Nombre total d'utilisations de chaque commande</td><td>À chaque commande</td><td>Statistiques globales et anonymes, pour améliorer le bot. Personne n'est identifié</td></tr>
+    </table>
+    <p>
+      Au moment d'une commande, le bot regarde aussi <strong>qui est connecté à ton salon vocal</strong>,
+      pour savoir qui fait partie de la squad. Cette information n'est pas enregistrée.
+    </p>
+    <p><strong>La Squad ne collecte jamais</strong> : le contenu de tes messages, le son des salons vocaux,
+      tes mots de passe (Discord, Steam ou autre), ni aucune donnée de paiement.</p>
+    <p>
+      Le bot garde aussi en cache des informations <strong>non personnelles</strong> sur les jeux
+      (catégories, nombre de joueurs, prix, catalogue Game Pass) pour répondre plus vite.
+    </p>
+
+    <h2>3. Sur quelle base légale ?</h2>
+    <p>
+      Les données sont traitées pour <strong>te fournir le service que tu demandes</strong>
+      (article 6.1.b du RGPD). Lier un compte, déclarer un abonnement ou ajouter un jeu est toujours
+      une démarche volontaire de ta part.
+    </p>
+
+    <h2>4. Combien de temps sont-elles gardées ?</h2>
+    <ul>
+      <li>Compte Steam, bibliothèque, Game Pass, jeux ajoutés : <strong>jusqu'à ce que tu les supprimes</strong>
+        (<code>/delier-steam</code>, <code>/jeu-retirer</code>, <code>/gamepass</code> ou <code>/supprimer-mes-donnees</code>).</li>
+      <li>Soirées et inscriptions : supprimées automatiquement <strong>48 heures</strong> après la date de la soirée.</li>
+      <li>Votes : jamais enregistrés.</li>
+      <li>Commandes utilisées sur un serveur : supprimées automatiquement après 13 mois.</li>
+      <li>Parties, notes et avis sur le nombre de joueurs : jusqu'à ce que tu supprimes tes données (tu es alors retiré des parties enregistrées).</li>
+      <li>Activité sur un serveur : supprimée quand le bot quitte le serveur ou quand tu supprimes tes données. Seuls les 60 derniers jours sont pris en compte pour les alertes.</li>
+      <li>Sauvegardes : une copie de la base est faite chaque nuit et conservée 7 jours, pour pouvoir réparer le service en cas de panne. Une donnée supprimée disparaît donc aussi des sauvegardes au bout de 7 jours maximum.</li>
+    </ul>
+
+    <h2>5. Qui y a accès ?</h2>
+    <p>Tes données ne sont <strong>ni vendues, ni louées, ni utilisées pour de la publicité</strong>. Seul l'éditeur du bot y a accès, pour le faire fonctionner.</p>
+    <p>
+      <strong>Ce que voient les autres membres :</strong> sur un serveur où le bot est présent, les autres
+      membres peuvent voir ton pseudo Steam, ton nombre de jeux, tes jeux les plus joués (<code>/profil</code>) et
+      les jeux que vous avez en commun. Ces informations sont déjà publiques sur ton profil Steam.
+    </p>
+    <p>Pour fonctionner, le bot interroge les services suivants :</p>
+    <table>
+      <tr><th>Service</th><th>Ce qui est envoyé</th></tr>
+      <tr><td>Discord (Discord Inc., États-Unis)</td><td>Les messages et réponses du bot. La plateforme elle-même</td></tr>
+      <tr><td>API Steam (Valve Corporation, États-Unis)</td><td>Ton identifiant Steam, pour lire ton profil et ta liste de jeux publics</td></tr>
+      <tr><td>IsThereAnyDeal, PCGamingWiki, catalogue Microsoft Game Pass</td><td>Uniquement des identifiants de jeux. <strong>Aucune donnée personnelle</strong></td></tr>
+      <tr><td>Hébergeur du bot : [NOM DE L'HÉBERGEUR DU VPS], [PAYS]</td><td>Stockage de la base de données</td></tr>
+    </table>
+    <p>
+      Discord et Steam étant des services américains, certaines données transitent hors de l'Union
+      européenne, selon leurs propres politiques de confidentialité.
+    </p>
+
+    <h2>6. Tes droits</h2>
+    <p>Conformément au RGPD, tu peux à tout moment :</p>
+    <ul>
+      <li><strong>Effacer</strong> toutes tes données, immédiatement : <code>/supprimer-mes-donnees</code> ;</li>
+      <li><strong>Consulter</strong> ce que le bot sait de toi : <code>/profil</code> ;</li>
+      <li><strong>Corriger</strong> tes données : <code>/actualiser</code>, <code>/jeu-ajouter</code>, <code>/jeu-retirer</code>, <code>/gamepass</code> ;</li>
+      <li>Demander une <strong>copie</strong> de tes données, t'<strong>opposer</strong> à un traitement ou poser une question : écris à <strong>[TON ADRESSE E-MAIL]</strong> (réponse sous 30 jours maximum).</li>
+    </ul>
+    <p>
+      Si tu estimes que tes droits ne sont pas respectés, tu peux saisir la CNIL :
+      <a rel="noopener noreferrer" href="https://www.cnil.fr/fr/plaintes">www.cnil.fr/fr/plaintes</a>.
+    </p>
+
+    <h2>7. Sécurité</h2>
+    <p>
+      La base de données est stockée sur un serveur privé, accessible uniquement à l'éditeur. Le bot
+      ne demande jamais de mot de passe et n'a aucun accès à tes comptes : il ne lit que des informations
+      publiques ou que tu lui as volontairement données.
+    </p>
+
+    <h2>8. Mineurs</h2>
+    <p>
+      Discord est réservé aux personnes ayant l'âge minimum fixé par Discord dans leur pays. En France,
+      si tu as moins de 15 ans, demande l'accord d'un parent avant d'enregistrer tes jeux.
+    </p>
+
+    <h2>9. Cookies</h2>
+    <p>Ce site n'utilise ni cookies, ni outils de suivi, ni publicité.</p>
+
+    <h2>10. Modifications</h2>
+    <p>
+      Cette politique peut évoluer, par exemple si de nouvelles fonctionnalités sont ajoutées. La date
+      de mise à jour en haut de page sera alors modifiée. En cas de changement important, une annonce
+      sera faite sur le serveur Discord de support.
+    </p>
+
+    <p><a href="index.html">← Retour à l'accueil</a></p>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div><a href="cgu.html">Conditions d'utilisation</a><a href="cgu.html#mentions-legales">Mentions légales</a></div>
+      <div>La Squad n'est pas affilié à Discord, Valve, Microsoft ou aux éditeurs cités.</div>
+    </div>
+  </footer>
+</body>
+</html>
