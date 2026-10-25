@@ -23,7 +23,7 @@
 
   <main class="legal">
     <h1>Politique de confidentialité</h1>
-    <p class="updated">Dernière mise à jour : 24 octobre 2026</p>
+    <p class="updated">Dernière mise à jour : 25 octobre 2026</p>
 
     <p class="note">
       En résumé : La Squad utilise uniquement ce dont il a besoin pour trouver des jeux en commun
@@ -41,12 +41,13 @@
     <table>
       <tr><th>Donnée</th><th>Quand</th><th>Pourquoi</th></tr>
       <tr><td>Identifiant Discord (numéro de compte)</td><td>Dès que tu enregistres des jeux ou t'inscris à une soirée</td><td>Associer tes jeux à ton compte Discord</td></tr>
-      <tr><td>Identifiant Steam (SteamID64) et pseudo Steam</td><td>Quand tu relies ton Steam dans <code>/mes-jeux</code></td><td>Lire ta bibliothèque Steam</td></tr>
-      <tr><td>Liste de tes jeux Steam et temps de jeu</td><td>Quand tu relies ton Steam dans <code>/mes-jeux</code>, puis mise à jour toutes les 12 h environ quand tu utilises le bot</td><td>Trouver les jeux en commun et les trier</td></tr>
-      <tr><td>Abonnement Game Pass (oui / non)</td><td>Avec le bouton Game Pass de <code>/mes-jeux</code></td><td>Compter les jeux du Game Pass comme les tiens</td></tr>
-      <tr><td>Jeux ajoutés à la main et leur plateforme</td><td>Avec <code>/mes-jeux</code> (ajout un par un ou import d'une liste)</td><td>Compter tes jeux hors Steam</td></tr>
+      <tr><td>Identifiant Steam (SteamID64) et pseudo Steam</td><td>Quand tu relies ton Steam dans <code>/profil</code></td><td>Lire ta bibliothèque Steam</td></tr>
+      <tr><td>Liste de tes jeux Steam et temps de jeu</td><td>Quand tu relies ton Steam dans <code>/profil</code>, puis mise à jour toutes les 12 h environ quand tu utilises le bot</td><td>Trouver les jeux en commun et les trier</td></tr>
+      <tr><td>Abonnement Game Pass (oui / non)</td><td>Avec le bouton Game Pass de <code>/profil</code> (⚙️ Gérer mes jeux)</td><td>Compter les jeux du Game Pass comme les tiens</td></tr>
+      <tr><td>Jeux ajoutés à la main et leur plateforme</td><td>Avec <code>/profil</code> → ⚙️ Gérer mes jeux (ajout un par un ou import d'une liste)</td><td>Compter tes jeux hors Steam</td></tr>
       <tr><td>Soirées : serveur, salon, message, jeu, date, organisateur, réponses des participants et leur pseudo Discord</td><td>Avec <code>/soiree</code> et ses boutons</td><td>Afficher les inscrits (pseudos écrits en clair) et publier l'annonce dans le salon</td></tr>
       <tr><td>Rappels de soirée choisis : soirée, délais, envoyé ou non</td><td>Quand tu choisis tes rappels après « Je viens » ou avec « 🔔 Mes rappels »</td><td>T'envoyer un rappel en message privé au moment choisi. Supprimés avec la soirée, 48 h après</td></tr>
+      <tr><td>Préférences de rappels : rappels cochés par défaut, rappels coupés ou non</td><td>Avec <code>/mes-rappels</code></td><td>Pré-cocher tes rappels quand tu cliques sur « Je viens », ou ne plus t'envoyer de message privé. Gardées jusqu'à ce que tu supprimes tes données</td></tr>
       <tr><td>Votes</td><td>Avec <code>/vote</code> ou un bouton « Lancer un vote »</td><td>Compter les voix. Gardés uniquement en mémoire pendant le vote (14 minutes maximum), jamais enregistrés</td></tr>
       <tr><td>Activité sur un serveur : identifiant du serveur, ton identifiant Discord, date de ta dernière utilisation du bot</td><td>Quand tu utilises une commande, ou quand tu es dans le salon vocal d'une recherche</td><td>Savoir quels membres actifs prendre en compte pour les alertes promo du serveur</td></tr>
       <tr><td>Réglages d'un serveur (salons, rôles à mentionner, réduction minimum, délai de l'annonce des soirées, rappels en message privé autorisés ou non, durée des votes, jeux par page, rôle autorisé…) et promos déjà annoncées</td><td>Avec <code>/reglages</code> (administrateurs)</td><td>Appliquer les choix des admins et publier les promos sans répéter les mêmes. Aucune donnée personnelle</td></tr>
@@ -77,8 +78,9 @@
     <h2>4. Combien de temps sont-elles gardées ?</h2>
     <ul>
       <li>Compte Steam, bibliothèque, Game Pass, jeux ajoutés : <strong>jusqu'à ce que tu les supprimes</strong>
-        (dans <code>/mes-jeux</code>, ou d'un coup avec <code>/supprimer-mes-donnees</code>).</li>
+        (dans <code>/profil</code> → ⚙️ Gérer mes jeux, ou d'un coup avec <code>/supprimer-mes-donnees</code>).</li>
       <li>Soirées, inscriptions et rappels de soirée : supprimés automatiquement <strong>48 heures</strong> après la date de la soirée.</li>
+      <li>Préférences de rappels (<code>/mes-rappels</code>) : jusqu'à ce que tu supprimes tes données.</li>
       <li>Votes : jamais enregistrés.</li>
       <li>Commandes utilisées sur un serveur : supprimées automatiquement après 13 mois.</li>
       <li>Parties, notes et avis sur le nombre de joueurs : jusqu'à ce que tu supprimes tes données (tu es alors retiré des parties enregistrées).</li>
@@ -112,8 +114,8 @@
     <p>Conformément au RGPD, tu peux à tout moment :</p>
     <ul>
       <li><strong>Effacer</strong> toutes tes données, immédiatement : <code>/supprimer-mes-donnees</code> ;</li>
-      <li><strong>Consulter</strong> ce que le bot sait de toi : <code>/mes-jeux</code> ou <code>/profil</code> ;</li>
-      <li><strong>Corriger</strong> tes données : <code>/mes-jeux</code> (actualiser Steam, ajouter ou retirer un jeu, Game Pass) ;</li>
+      <li><strong>Consulter</strong> ce que le bot sait de toi : <code>/profil</code> ;</li>
+      <li><strong>Corriger</strong> tes données : <code>/profil</code> → ⚙️ Gérer mes jeux (actualiser Steam, ajouter ou retirer un jeu, Game Pass) ;</li>
       <li>Demander une <strong>copie</strong> de tes données, t'<strong>opposer</strong> à un traitement ou poser une question : écris à <strong><a href="mailto:support.lasquad@gmail.com">support.lasquad@gmail.com</a></strong> (réponse sous 30 jours maximum).</li>
     </ul>
     <p>
