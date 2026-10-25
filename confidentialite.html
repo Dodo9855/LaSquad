@@ -45,10 +45,11 @@
       <tr><td>Liste de tes jeux Steam et temps de jeu</td><td>Quand tu relies ton Steam dans <code>/mes-jeux</code>, puis mise à jour toutes les 12 h environ quand tu utilises le bot</td><td>Trouver les jeux en commun et les trier</td></tr>
       <tr><td>Abonnement Game Pass (oui / non)</td><td>Avec le bouton Game Pass de <code>/mes-jeux</code></td><td>Compter les jeux du Game Pass comme les tiens</td></tr>
       <tr><td>Jeux ajoutés à la main et leur plateforme</td><td>Avec <code>/mes-jeux</code> (ajout un par un ou import d'une liste)</td><td>Compter tes jeux hors Steam</td></tr>
-      <tr><td>Soirées : serveur, salon, message, jeu, date, organisateur, réponses des participants</td><td>Avec <code>/soiree</code> et ses boutons</td><td>Afficher les inscrits et envoyer le rappel</td></tr>
+      <tr><td>Soirées : serveur, salon, message, jeu, date, organisateur, réponses des participants et leur pseudo Discord</td><td>Avec <code>/soiree</code> et ses boutons</td><td>Afficher les inscrits (pseudos écrits en clair) et publier l'annonce dans le salon</td></tr>
+      <tr><td>Rappels de soirée choisis : soirée, délais, envoyé ou non</td><td>Quand tu choisis tes rappels après « Je viens » ou avec « 🔔 Mes rappels »</td><td>T'envoyer un rappel en message privé au moment choisi. Supprimés avec la soirée, 48 h après</td></tr>
       <tr><td>Votes</td><td>Avec <code>/vote</code> ou un bouton « Lancer un vote »</td><td>Compter les voix. Gardés uniquement en mémoire pendant le vote (14 minutes maximum), jamais enregistrés</td></tr>
       <tr><td>Activité sur un serveur : identifiant du serveur, ton identifiant Discord, date de ta dernière utilisation du bot</td><td>Quand tu utilises une commande, ou quand tu es dans le salon vocal d'une recherche</td><td>Savoir quels membres actifs prendre en compte pour les alertes promo du serveur</td></tr>
-      <tr><td>Réglages d'un serveur (salons, rôles à mentionner, réduction minimum, délai du rappel, durée des votes, jeux par page, rôle autorisé…) et promos déjà annoncées</td><td>Avec <code>/reglages</code> (administrateurs)</td><td>Appliquer les choix des admins et publier les promos sans répéter les mêmes. Aucune donnée personnelle</td></tr>
+      <tr><td>Réglages d'un serveur (salons, rôles à mentionner, réduction minimum, délai de l'annonce des soirées, rappels en message privé autorisés ou non, durée des votes, jeux par page, rôle autorisé…) et promos déjà annoncées</td><td>Avec <code>/reglages</code> (administrateurs)</td><td>Appliquer les choix des admins et publier les promos sans répéter les mêmes. Aucune donnée personnelle</td></tr>
       <tr><td>Parties jouées (jeu, date, serveur, participants)</td><td>Avec <code>/historique</code> (« On a joué à… ») ou le bouton « On y joue ! »</td><td>Afficher l'historique de la squad et la date de la dernière partie</td></tr>
       <tr><td>Tes notes de jeux (1 à 5)</td><td>Avec <code>/historique</code> (« Noter un jeu »)</td><td>Afficher la note moyenne de la squad et améliorer les recommandations</td></tr>
       <tr><td>Ton avis sur le nombre maximum de joueurs d'un jeu</td><td>Avec <code>/historique</code> (« Corriger le nombre de joueurs »)</td><td>Calculer le nombre de places (valeur médiane des avis, anonyme)</td></tr>
@@ -77,7 +78,7 @@
     <ul>
       <li>Compte Steam, bibliothèque, Game Pass, jeux ajoutés : <strong>jusqu'à ce que tu les supprimes</strong>
         (dans <code>/mes-jeux</code>, ou d'un coup avec <code>/supprimer-mes-donnees</code>).</li>
-      <li>Soirées et inscriptions : supprimées automatiquement <strong>48 heures</strong> après la date de la soirée.</li>
+      <li>Soirées, inscriptions et rappels de soirée : supprimés automatiquement <strong>48 heures</strong> après la date de la soirée.</li>
       <li>Votes : jamais enregistrés.</li>
       <li>Commandes utilisées sur un serveur : supprimées automatiquement après 13 mois.</li>
       <li>Parties, notes et avis sur le nombre de joueurs : jusqu'à ce que tu supprimes tes données (tu es alors retiré des parties enregistrées).</li>
@@ -89,8 +90,10 @@
     <p>Tes données ne sont <strong>ni vendues, ni louées, ni utilisées pour de la publicité</strong>. Seul l'éditeur du bot y a accès, pour le faire fonctionner.</p>
     <p>
       <strong>Ce que voient les autres membres :</strong> sur un serveur où le bot est présent, les autres
-      membres peuvent voir ton pseudo Steam, ton nombre de jeux, tes jeux les plus joués (<code>/profil</code>) et
-      les jeux que vous avez en commun. Ces informations sont déjà publiques sur ton profil Steam.
+      membres peuvent voir ton pseudo Steam, ton nombre de jeux, ton temps de jeu, tes jeux les plus joués,
+      tes coups de cœur (jeux que tu as notés 4 ou 5 sur 5) (<code>/profil</code>) et
+      les jeux que vous avez en commun. Ton pseudo Steam, tes jeux et ton temps de jeu sont déjà publics sur ton profil Steam ;
+      tes notes sont visibles par la squad dans <code>/historique</code>.
     </p>
     <p>Pour fonctionner, le bot interroge les services suivants :</p>
     <table>
