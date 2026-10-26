@@ -23,7 +23,7 @@
 
   <main class="legal">
     <h1>Politique de confidentialité</h1>
-    <p class="updated">Dernière mise à jour : 25 octobre 2026</p>
+    <p class="updated">Dernière mise à jour : 26 octobre 2026</p>
 
     <p class="note">
       En résumé : La Squad utilise uniquement ce dont il a besoin pour trouver des jeux en commun
@@ -51,6 +51,7 @@
       <tr><td>Préférences de rappels : rappels cochés par défaut, rappels coupés ou non</td><td>Avec <code>/agenda</code></td><td>Choisir les rappels mis d'office quand tu cliques sur « Je viens », ou ne plus t'envoyer de message privé. Gardées jusqu'à ce que tu supprimes tes données</td></tr>
       <tr><td>Soirées récurrentes : serveur, salon, organisateur, jeu, places, jour et heure, fréquence</td><td>Avec <code>/soiree</code> et l'option « répéter » (ou « Répéter » dans la fenêtre « Organiser une soirée »)</td><td>Publier toute seule la soirée suivante. Gardées jusqu'à ce que l'organisateur arrête la série (<code>/agenda</code>) ou supprime ses données, ou que le bot quitte le serveur</td></tr>
       <tr><td>Préférences de ton profil : carte privée ou non, alertes perso activées ou non et réduction minimum</td><td>Avec <code>/profil</code> → ⚙️ Gérer mon compte (🔒 Confidentialité, 🔔 Alertes perso)</td><td>Cacher ta carte aux autres si tu le choisis ; t'écrire quand un jeu de ta liste de souhaits est en promo. Gardées jusqu'à ce que tu supprimes tes données</td></tr>
+      <tr><td>Ta famille Steam : les profils Steam que tu y ajoutes et, pour ceux qui n'utilisent pas La Squad, leur pseudo Steam et leur liste de jeux publique</td><td>Avec <code>/profil</code> → ⚙️ Gérer mon compte → 👪 Famille Steam</td><td>Compter les jeux que ta famille peut te prêter dans tes recherches. Leur liste de jeux est relue sur Steam toutes les 12 h au plus. Gardée jusqu'à ce que tu retires ces membres ou supprimes tes données ; quand plus personne ne déclare un profil, ses jeux sont effacés. Si tu supprimes tes données, ton profil Steam est aussi retiré de la famille des autres joueurs</td></tr>
       <tr><td>Promos de ta liste de souhaits déjà envoyées : jeu, réduction, date</td><td>Quand une alerte perso t'est envoyée en message privé</td><td>Ne pas t'envoyer deux fois la même promo. Ta liste de souhaits elle-même n'est pas enregistrée : elle est relue sur Steam à chaque vérification (toutes les 6 h)</td></tr>
       <tr><td>Votes</td><td>Avec <code>/vote</code> ou un bouton « Lancer un vote »</td><td>Compter les voix. Gardés uniquement en mémoire pendant le vote (14 minutes maximum), jamais enregistrés</td></tr>
       <tr><td>Activité sur un serveur : identifiant du serveur, ton identifiant Discord, date de ta dernière utilisation du bot</td><td>Quand tu utilises une commande, ou quand tu es dans le salon vocal d'une recherche</td><td>Savoir quels membres actifs prendre en compte pour les alertes promo du serveur</td></tr>
@@ -90,6 +91,7 @@
       <li>Parties, notes et avis sur le nombre de joueurs : jusqu'à ce que tu supprimes tes données (tu es alors retiré des parties enregistrées).</li>
       <li>Activité sur un serveur : supprimée quand le bot quitte le serveur ou quand tu supprimes tes données. Seuls les 60 derniers jours sont pris en compte pour les alertes.</li>
       <li>Préférences de profil et promos de ta liste de souhaits déjà envoyées : jusqu'à ce que tu supprimes tes données.</li>
+      <li>Famille Steam : jusqu'à ce que tu retires ses membres ou supprimes tes données. Les jeux d'un profil que plus personne ne déclare sont effacés aussitôt.</li>
       <li>Soirées récurrentes : jusqu'à leur arrêt dans <code>/agenda</code>, la suppression des données de l'organisateur ou le départ du bot du serveur.</li>
       <li>Sauvegardes : une copie de la base est faite chaque nuit et conservée 7 jours, pour pouvoir réparer le service en cas de panne. Une fois par semaine, une copie est aussi gardée hors du serveur, dans les messages privés Discord de l'éditeur : seules les 4 dernières sont conservées, les plus anciennes sont supprimées automatiquement. Une donnée supprimée disparaît donc des sauvegardes au bout de 4 semaines maximum.</li>
     </ul>
@@ -113,7 +115,7 @@
     <table>
       <tr><th>Service</th><th>Ce qui est envoyé</th></tr>
       <tr><td>Discord (Discord Inc., États-Unis)</td><td>Les messages et réponses du bot. La plateforme elle-même. Une copie hebdomadaire de la sauvegarde, envoyée en message privé à l'éditeur (4 copies au plus)</td></tr>
-      <tr><td>API Steam (Valve Corporation, États-Unis)</td><td>Ton identifiant Steam, pour lire ton profil, ta liste de jeux publics et, si tu actives les alertes perso, ta liste de souhaits</td></tr>
+      <tr><td>API Steam (Valve Corporation, États-Unis)</td><td>Ton identifiant Steam, pour lire ton profil, ta liste de jeux publics et, si tu actives les alertes perso, ta liste de souhaits. Les identifiants Steam des membres de ta famille Steam, pour lire leur pseudo et leur liste de jeux publics</td></tr>
       <tr><td>IsThereAnyDeal, PCGamingWiki, catalogue Microsoft Game Pass</td><td>Uniquement des identifiants de jeux. <strong>Aucune donnée personnelle</strong></td></tr>
       <tr><td>Hébergeur du bot : OVHcloud (OVH SAS), France</td><td>Stockage de la base de données</td></tr>
     </table>
