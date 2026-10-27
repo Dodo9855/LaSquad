@@ -48,17 +48,17 @@
       <tr><td>Soirées : serveur, salon, message, jeu, date, organisateur, réponses des participants et leur pseudo Discord</td><td>Avec <code>/soiree</code> et ses boutons</td><td>Afficher les inscrits (pseudos écrits en clair) et publier l'annonce dans le salon</td></tr>
       <tr><td>Rappels de soirée choisis : soirée, délais, envoyé ou non</td><td>Quand tu cliques sur « Je viens » (tes rappels par défaut) ou les changes avec « 🔔 Mes rappels »</td><td>T'envoyer un rappel en message privé au moment choisi. Supprimés avec la soirée, 48 h après ou dès son annulation</td></tr>
       <tr><td>Invitations à une soirée : soirée, membre invité, date, reçue ou messages privés fermés</td><td>Quand l'organisateur t'invite avec « 📨 Inviter des potes »</td><td>T'envoyer l'invitation en message privé une seule fois et limiter les invitations à 10 par soirée. Supprimées avec la soirée, 48 h après ou dès son annulation</td></tr>
-      <tr><td>Préférences de rappels : rappels cochés par défaut, rappels coupés ou non</td><td>Avec <code>/agenda</code></td><td>Choisir les rappels mis d'office quand tu cliques sur « Je viens », ou ne plus t'envoyer de message privé. Gardées jusqu'à ce que tu supprimes tes données</td></tr>
-      <tr><td>Soirées récurrentes : serveur, salon, organisateur, jeu, places, jour et heure, fréquence</td><td>Avec <code>/soiree</code> et l'option « répéter » (ou « Répéter » dans la fenêtre « Organiser une soirée »)</td><td>Publier toute seule la soirée suivante. Gardées jusqu'à ce que l'organisateur arrête la série (<code>/agenda</code>) ou supprime ses données, ou que le bot quitte le serveur</td></tr>
+      <tr><td>Préférences de rappels : rappels cochés par défaut, rappels coupés ou non</td><td>Avec <code>/soiree</code> (sans heure)</td><td>Choisir les rappels mis d'office quand tu cliques sur « Je viens », ou ne plus t'envoyer de message privé. Gardées jusqu'à ce que tu supprimes tes données</td></tr>
+      <tr><td>Soirées récurrentes : serveur, salon, organisateur, jeu, places, jour et heure, fréquence</td><td>Avec <code>/soiree</code> et l'option « répéter » (ou « Répéter » dans la fenêtre « Organiser une soirée »)</td><td>Publier toute seule la soirée suivante. Gardées jusqu'à ce que l'organisateur arrête la série (<code>/soiree</code> sans heure) ou supprime ses données, ou que le bot quitte le serveur</td></tr>
       <tr><td>Préférences de ton profil : carte privée ou non, alertes perso activées ou non et réduction minimum</td><td>Avec <code>/profil</code> → ⚙️ Gérer mon compte (🔒 Confidentialité, 🔔 Alertes perso)</td><td>Cacher ta carte aux autres si tu le choisis ; t'écrire quand un jeu de ta liste de souhaits est en promo. Gardées jusqu'à ce que tu supprimes tes données</td></tr>
       <tr><td>Ta famille Steam : les profils Steam que tu y ajoutes et, pour ceux qui n'utilisent pas La Squad, leur pseudo Steam et leur liste de jeux publique</td><td>Avec <code>/profil</code> → ⚙️ Gérer mon compte → 👪 Famille Steam</td><td>Compter les jeux que ta famille peut te prêter dans tes recherches. Leur liste de jeux est relue sur Steam toutes les 12 h au plus. Gardée jusqu'à ce que tu retires ces membres ou supprimes tes données ; quand plus personne ne déclare un profil, ses jeux sont effacés. Si tu supprimes tes données, ton profil Steam est aussi retiré de la famille des autres joueurs</td></tr>
       <tr><td>Promos de ta liste de souhaits déjà envoyées : jeu, réduction, date</td><td>Quand une alerte perso t'est envoyée en message privé</td><td>Ne pas t'envoyer deux fois la même promo. Ta liste de souhaits elle-même n'est pas enregistrée : elle est relue sur Steam à chaque vérification (toutes les 6 h)</td></tr>
-      <tr><td>Votes</td><td>Avec <code>/vote</code> ou un bouton « Lancer un vote »</td><td>Compter les voix. Gardés uniquement en mémoire pendant le vote (14 minutes maximum), jamais enregistrés</td></tr>
+      <tr><td>Votes</td><td>Avec un bouton « Lancer un vote »</td><td>Compter les voix. Gardés uniquement en mémoire pendant le vote (14 minutes maximum), jamais enregistrés</td></tr>
       <tr><td>Activité sur un serveur : identifiant du serveur, ton identifiant Discord, date de ta dernière utilisation du bot</td><td>Quand tu utilises une commande, ou quand tu es dans le salon vocal d'une recherche</td><td>Savoir quels membres actifs prendre en compte pour les alertes promo du serveur</td></tr>
       <tr><td>Réglages d'un serveur (salons, rôles à mentionner, réduction minimum, délai de l'annonce des soirées, rappels en message privé autorisés ou non, durée des votes, jeux par page, rôle autorisé…) et promos déjà annoncées</td><td>Avec <code>/reglages</code> (administrateurs)</td><td>Appliquer les choix des admins et publier les promos sans répéter les mêmes. Aucune donnée personnelle</td></tr>
-      <tr><td>Parties jouées (jeu, date, serveur, participants)</td><td>Avec <code>/mesnotes</code> (« On a joué à… ») ou le bouton « On y joue ! »</td><td>Afficher tes dernières parties, le Wrapped de la squad et la date de la dernière partie</td></tr>
-      <tr><td>Tes notes de jeux (1 à 5)</td><td>Avec <code>/mesnotes</code> (« Noter un jeu », « Toutes mes notes »)</td><td>Afficher la note moyenne de la squad et améliorer les recommandations</td></tr>
-      <tr><td>Ton avis sur le nombre maximum de joueurs d'un jeu</td><td>Avec <code>/mesnotes</code> (« Corriger le nombre de joueurs »)</td><td>Calculer le nombre de places (valeur médiane des avis, anonyme)</td></tr>
+      <tr><td>Parties jouées (jeu, date, serveur, participants)</td><td>Avec le bouton « On y joue ! » du tirage au sort</td><td>Le Wrapped de la squad, ton partenaire de toujours et la date de la dernière partie</td></tr>
+      <tr><td>Tes notes de jeux (1 à 5), données avant le 27 octobre 2026</td><td>La notation des jeux a été retirée : plus aucune note n'est enregistrée</td><td>Plus utilisées. Les anciennes notes restent stockées jusqu'à ce que tu supprimes tes données</td></tr>
+      <tr><td>Ton avis sur le nombre maximum de joueurs d'un jeu</td><td>Avec <code>/jeu</code> (« 👥 Nombre de joueurs »)</td><td>Calculer le nombre de places (valeur médiane des avis, anonyme)</td></tr>
       <tr><td>Commandes utilisées sur un serveur (serveur, ton identifiant, nom de la commande, date)</td><td>À chaque commande sur un serveur</td><td>Récap mensuel « Wrapped » du serveur (ex. « le plus actif sur le bot »)</td></tr>
       <tr><td>Nombre total d'utilisations de chaque commande</td><td>À chaque commande</td><td>Statistiques globales et anonymes, pour améliorer le bot. Personne n'est identifié</td></tr>
     </table>
@@ -85,14 +85,14 @@
       <li>Compte Steam, bibliothèque, Game Pass, jeux ajoutés : <strong>jusqu'à ce que tu les supprimes</strong>
         (dans <code>/profil</code> → ⚙️ Gérer mon compte, ou d'un coup avec <code>/mesdonnees</code>).</li>
       <li>Soirées, inscriptions et rappels de soirée : supprimés automatiquement <strong>48 heures</strong> après la date de la soirée, ou tout de suite si elle est annulée.</li>
-      <li>Préférences de rappels (<code>/agenda</code>) : jusqu'à ce que tu supprimes tes données.</li>
+      <li>Préférences de rappels (<code>/soiree</code> sans heure) : jusqu'à ce que tu supprimes tes données.</li>
       <li>Votes : jamais enregistrés.</li>
       <li>Commandes utilisées sur un serveur : supprimées automatiquement après 13 mois.</li>
       <li>Parties, notes et avis sur le nombre de joueurs : jusqu'à ce que tu supprimes tes données (tu es alors retiré des parties enregistrées).</li>
       <li>Activité sur un serveur : supprimée quand le bot quitte le serveur ou quand tu supprimes tes données. Seuls les 60 derniers jours sont pris en compte pour les alertes.</li>
       <li>Préférences de profil et promos de ta liste de souhaits déjà envoyées : jusqu'à ce que tu supprimes tes données.</li>
       <li>Famille Steam : jusqu'à ce que tu retires ses membres ou supprimes tes données. Les jeux d'un profil que plus personne ne déclare sont effacés aussitôt.</li>
-      <li>Soirées récurrentes : jusqu'à leur arrêt dans <code>/agenda</code>, la suppression des données de l'organisateur ou le départ du bot du serveur.</li>
+      <li>Soirées récurrentes : jusqu'à leur arrêt dans <code>/soiree</code> (sans heure), la suppression des données de l'organisateur ou le départ du bot du serveur.</li>
       <li>Sauvegardes : une copie de la base est faite chaque nuit et conservée 7 jours, pour pouvoir réparer le service en cas de panne. Une fois par semaine, une copie est aussi gardée hors du serveur, dans les messages privés Discord de l'éditeur : seules les 4 dernières sont conservées, les plus anciennes sont supprimées automatiquement. Une donnée supprimée disparaît donc des sauvegardes au bout de 4 semaines maximum.</li>
     </ul>
 
@@ -102,9 +102,7 @@
       <strong>Ce que voient les autres membres :</strong> sur un serveur où le bot est présent, les autres
       membres peuvent voir ton pseudo Steam, ton nombre de jeux, ton temps de jeu, tes jeux les plus joués et ceux du moment
       (sur Steam, ces 2 dernières semaines), ton partenaire de jeu de toujours (le joueur avec qui tu as enregistré le plus de parties) (<code>/profil</code>) et
-      les jeux que vous avez en commun. Ton pseudo Steam, tes jeux et ton temps de jeu sont déjà publics sur ton profil Steam ;
-      tes notes comptent dans la note moyenne de la squad (fiche d'un jeu, Wrapped) ; leur détail reste privé dans
-      <code>/mesnotes</code>, sauf si tu le montres avec « 📢 Montrer à la squad ».
+      les jeux que vous avez en commun. Ton pseudo Steam, tes jeux et ton temps de jeu sont déjà publics sur ton profil Steam.
     </p>
     <p>
       Tu peux mettre ta carte en <strong>privé</strong> : <code>/profil</code> → ⚙️ Gérer mon compte → 🔒 Confidentialité →
