@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>La Squad — On joue à quoi ce soir ?</title>
-  <meta name="description" content="La Squad est un bot Discord 100 % français qui trouve les jeux que toute ta squad possède sur Steam, Game Pass, Epic et Battle.net, avec le meilleur prix pour celui à qui il manque le jeu.">
+  <meta name="description" content="La Squad est un bot Discord 100 % français qui trouve les jeux que toute ta squad possède sur Steam, Game Pass, Epic et Battle.net, organise vos soirées (invitations, inscriptions, rappels) et prévient des promos.">
   <meta property="og:title" content="La Squad — On joue à quoi ce soir ?">
   <meta property="og:description" content="Le bot Discord qui trouve à quoi jouer avec tes potes en 10 secondes.">
   <meta property="og:type" content="website">
@@ -37,11 +37,12 @@
     <section class="hero">
       <div class="wrap">
         <img class="hero-emblem" src="embleme.png" alt="Logo La Squad : une squad de 4 joueurs devant une manette" width="300" height="249">
-        <span class="badge">Bot Discord 100 % en français · gratuit</span>
+        <span class="badge">Bot Discord 100 % en français</span>
         <h1>On joue à quoi <em>ce soir</em>&nbsp;?</h1>
         <p class="lead">
           La Squad compare les jeux de toute ta squad (Steam, Game Pass, Epic, Battle.net…)
-          et te dit en 10 secondes à quoi vous pouvez jouer ensemble. Fini les 30 minutes de débat.
+          et te dit en 10 secondes à quoi vous pouvez jouer ensemble. Puis elle organise la soirée :
+          invitations, inscriptions et un rappel pour tout le monde.
         </p>
         <div class="actions">
           <!-- Remplace l'identifiant si tu changes d'application Discord -->
@@ -49,6 +50,7 @@
           <a class="btn ghost" href="#comment">Comment ça marche ?</a>
         </div>
 
+        <div class="demos">
         <div class="demo" aria-label="Exemple de réponse du bot">
           <div class="cmd">Théo a utilisé <b>/nosjeux</b></div>
           <div class="embed">
@@ -62,6 +64,19 @@
             <small>🎲 Au hasard</small>
           </div>
         </div>
+        <div class="demo soiree" aria-label="Exemple de soirée organisée">
+          <div class="cmd">Inès a utilisé <b>/soiree</b></div>
+          <div class="embed">
+            <h4>📅 Valheim · samedi 21:00</h4>
+            <small>Organisée par Inès · 4 places · 2 potes invités en message privé</small>
+            <ul>
+              <li>✅ <b>Je viens</b> : Inès, Théo, Lucas</li>
+              <li>❔ <b>Peut-être</b> : Sarah</li>
+            </ul>
+            <small>⏰ Rappel en message privé 30 min avant, et une annonce dans le salon</small>
+          </div>
+        </div>
+        </div>
       </div>
     </section>
 
@@ -71,8 +86,8 @@
         <p class="sub">Pensé pour les groupes d'amis qui jouent sur PC, sans prise de tête.</p>
         <div class="grid">
           <div class="card"><div class="icon">🎮</div><h3>Jeux en commun</h3><p>Les jeux multijoueurs que tout le salon vocal possède, triés par ce que vous jouez le plus.</p></div>
+          <div class="card wide"><div class="icon">📅</div><h3>Soirées organisées</h3><p>« Samedi 21 h sur Valheim ? » Invitations en message privé, inscriptions par boutons, places limitées, un rappel en message privé avant le début et une annonce dans le salon. La soirée peut revenir toute seule chaque semaine, et <code>/messoirees</code> rassemble les tiennes sur tous tes serveurs.</p></div>
           <div class="card"><div class="icon">🟩</div><h3>Game Pass, Epic, Battle.net</h3><p>Pas que Steam : active le Game Pass ou ajoute tes jeux Epic, Riot, Battle.net en un clic.</p></div>
-          <div class="card"><div class="icon">📅</div><h3>Soirées organisées</h3><p>« Samedi 21h ? » Inscriptions par boutons, places limitées, rappels en message privé et annonce juste avant le début.</p></div>
           <div class="card"><div class="icon">👪</div><h3>Famille Steam</h3><p>Les jeux que ta famille Steam te prête comptent aussi, et le bot vérifie qu'il y a assez d'exemplaires pour jouer tous ensemble.</p></div>
           <div class="card"><div class="icon">🎲</div><h3>Tirage au sort</h3><p>Un clic sur 🎲 et le hasard choisit, relancez autant de fois que vous voulez.</p></div>
           <div class="card"><div class="icon">🆓</div><h3>Jeux gratuits</h3><p>Les jeux offerts sur Epic chaque jeudi, et ceux donnés sur Steam, GOG, Prime Gaming… dès qu'ils apparaissent.</p></div>

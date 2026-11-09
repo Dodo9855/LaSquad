@@ -150,3 +150,10 @@ footer a { color: var(--muted); margin-right: 16px; }
 .btn.ghost { background: transparent; box-shadow: none; }
 .step::before { background: var(--flame); }
 .demo .embed { border-left-color: var(--accent); }
+
+/* --- Deux exemples sous le titre : la recherche, puis la soirée --- */
+.demos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; max-width: 960px; margin: 44px auto 0; }
+.demos .demo { margin: 0; max-width: none; }
+.demo.soiree .embed { border-left-color: #f1c40f; }
+.demo .embed ul { margin: 6px 0; padding-left: 0; list-style: none; }
+@media (min-width: 760px) { .card.wide { grid-column: span 2; } }
