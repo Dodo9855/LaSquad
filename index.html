@@ -50,16 +50,16 @@
         </div>
 
         <div class="demo" aria-label="Exemple de réponse du bot">
-          <div class="cmd">Théo a utilisé <b>/onjoueaquoi</b></div>
+          <div class="cmd">Théo a utilisé <b>/nosjeux</b></div>
           <div class="embed">
             <h4>🎮 On joue à quoi ce soir ?</h4>
             <small>Squad : Théo, Inès, Lucas, Sarah (4 joueurs)</small>
             <ol>
-              <li><b>Deep Rock Galactic</b> — coop · jusqu'à 4 · 210 h à vous tous</li>
-              <li><b>Valheim</b> — coop · jusqu'à 10 · <small>Sarah avec le Game Pass</small></li>
+              <li><b>Deep Rock Galactic</b> — coop · jusqu'à 4</li>
+              <li><b>Valheim</b> — coop · jusqu'à 10</li>
               <li><b>Apex Legends</b> — gratuit · PvP</li>
             </ol>
-            <small>🎲 Tirer au sort</small>
+            <small>🎲 Au hasard</small>
           </div>
         </div>
       </div>
@@ -71,15 +71,12 @@
         <p class="sub">Pensé pour les groupes d'amis qui jouent sur PC, sans prise de tête.</p>
         <div class="grid">
           <div class="card"><div class="icon">🎮</div><h3>Jeux en commun</h3><p>Les jeux multijoueurs que tout le salon vocal possède, triés par ce que vous jouez le plus.</p></div>
-          <div class="card"><div class="icon">🛒</div><h3>Il manque à un pote ?</h3><p>Le bot affiche le meilleur prix du moment, la réduction et le prix le plus bas historique.</p></div>
           <div class="card"><div class="icon">🟩</div><h3>Game Pass, Epic, Battle.net</h3><p>Pas que Steam : active le Game Pass ou ajoute tes jeux Epic, Riot, Battle.net en un clic.</p></div>
-          <div class="card"><div class="icon">🗳️</div><h3>Vote en direct</h3><p>Personne n'arrive à se décider ? Un vote avec des boutons, résultat en quelques minutes.</p></div>
           <div class="card"><div class="icon">📅</div><h3>Soirées organisées</h3><p>« Samedi 21h ? » Inscriptions par boutons, places limitées, rappels en message privé et annonce juste avant le début.</p></div>
           <div class="card"><div class="icon">👪</div><h3>Famille Steam</h3><p>Les jeux que ta famille Steam te prête comptent aussi, et le bot vérifie qu'il y a assez d'exemplaires pour jouer tous ensemble.</p></div>
           <div class="card"><div class="icon">🎲</div><h3>Tirage au sort</h3><p>Un clic sur 🎲 et le hasard choisit, relancez autant de fois que vous voulez.</p></div>
-          <div class="card"><div class="icon">💡</div><h3>Recommandations</h3><p>Vous avez adoré Valheim ? Le bot vous propose des jeux du même style, avec leur prix.</p></div>
           <div class="card"><div class="icon">🆓</div><h3>Jeux gratuits</h3><p>Les jeux offerts sur Epic chaque jeudi, et ceux donnés sur Steam, GOG, Prime Gaming… dès qu'ils apparaissent.</p></div>
-          <div class="card"><div class="icon">🎁</div><h3>Wrapped mensuel</h3><p>Chaque mois, le récap de la squad : soirées, jeux préférés et MVP. À partager !</p></div>
+          <div class="card"><div class="icon">🎁</div><h3>Récap du mois</h3><p>Chaque mois, le récap de la squad : soirées, jeux préférés et MVP. À partager !</p></div>
           <div class="card"><div class="icon">🔥</div><h3>Alertes promo</h3><p>Le bot prévient la squad quand un jeu qu'il manque à certains passe en promo, et toi en message privé quand un jeu de ta liste de souhaits Steam est en promo.</p></div>
           <div class="card"><div class="icon">⚙️</div><h3>Réglages en un écran</h3><p>Les admins règlent tout dans <code>/reglages</code>, sur un seul écran.</p></div>
         </div>
@@ -93,7 +90,7 @@
         <div class="steps">
           <div class="step"><h3>Ajoute le bot</h3><p>Clique sur « Ajouter à Discord » et choisis ton serveur.</p></div>
           <div class="step"><h3>Enregistre tes jeux</h3><p>Tape <code>/profil</code> : relie ton Steam, active le Game Pass si tu l'as, ajoute le reste en un clic.</p></div>
-          <div class="step"><h3>Rejoins le vocal</h3><p>Avec tes potes, tape <code>/onjoueaquoi</code>. C'est tout !</p></div>
+          <div class="step"><h3>Rejoins le vocal</h3><p>Avec tes potes, tape <code>/nosjeux</code>. C'est tout !</p></div>
         </div>
       </div>
     </section>
@@ -104,15 +101,16 @@
         <p class="sub">Toutes en français, toutes avec des explications dans Discord.</p>
         <div class="table-scroll">
           <table class="commands">
-            <tr><td><code>/onjoueaquoi</code></td><td>Les jeux multijoueurs que tout le salon vocal possède (hors vocal : avec qui tu veux), un jeu à la fois avec sa description, avec filtres, tirage au sort, vote et soirée en un clic. Boutons 🛒 Presque (les jeux qu'il manque à 1 à 3 potes, au meilleur prix) et 💡 Idées (des jeux à découvrir selon vos goûts).</td></tr>
+            <tr><td><code>/nosjeux</code></td><td>Les jeux multijoueurs que tout le salon vocal possède, un jeu à la fois avec sa description ou en liste, avec filtres et un bouton « Au hasard ».</td></tr>
             <tr><td><code>/jeu</code></td><td>La fiche d'un jeu : description, prix, avis Steam, et qui l'a dans ta squad. Le nombre de joueurs est faux ? Corrige-le d'un clic.</td></tr>
             <tr><td><code>/nouveautes</code></td><td>Les nouveautés, tendances et sorties à venir sur Steam, un jeu à la fois avec sa description (ou en liste), à filtrer (solo, coop, PvP, gratuits, prix…) et à trier. Et les jeux offerts en ce moment sur Epic, Steam, GOG…</td></tr>
-            <tr><td><code>/soiree</code></td><td>Organise une soirée (une heure et, si besoin, un jour : ex. 21h, samedi) avec inscriptions, invitations en message privé, rappels et annonce. Elle peut revenir toute seule chaque semaine. Sans heure : tes soirées à venir sur tous tes serveurs, pour changer tes rappels ou arrêter tes soirées récurrentes.</td></tr>
-            <tr><td><code>/wrapped</code></td><td>Le récap du mois de la squad, publié automatiquement chaque 1er du mois.</td></tr>
+            <tr><td><code>/soiree</code></td><td>Organise une soirée (une heure et, si besoin, un jour : ex. 21h, samedi) avec inscriptions, invitations en message privé, rappels et annonce. Elle peut revenir toute seule chaque semaine. Avant de la créer, tu vois qui a le jeu sur le serveur.</td></tr>
+            <tr><td><code>/messoirees</code></td><td>Tes soirées à venir sur tous tes serveurs : celles où tu viens et celles que tu organises, avec tes rappels et tes soirées récurrentes.</td></tr>
+            <tr><td><code>/recap</code></td><td>Le récap du mois de la squad, publié automatiquement chaque 1er du mois.</td></tr>
             <tr><td><code>/profil</code></td><td>Ta carte de joueur (jeux les plus joués, ceux du moment, genres préférés) : lie ton Steam et gère tes jeux (Game Pass, Epic, Battle.net, Riot…), tes alertes perso, qui peut voir ta carte et tes données, ou regarde la carte d'un pote.</td></tr>
             <tr><td><code>/aide</code></td><td>Le mode d'emploi, par thème.</td></tr>
             <tr><td><code>/mesdonnees</code></td><td>Efface toutes tes données, immédiatement.</td></tr>
-            <tr><td><code>/reglages</code></td><td>Admins : alertes promo et jeux gratuits, Wrapped automatique, soirées, votes, recherches et accès.</td></tr>
+            <tr><td><code>/reglages</code></td><td>Admins : alertes promo et jeux gratuits, récap du mois, soirées, recherches et accès.</td></tr>
           </table>
         </div>
       </div>
@@ -124,10 +122,10 @@
         <p class="sub">&nbsp;</p>
         <details><summary>C'est gratuit ?</summary><p>Oui, toutes les fonctionnalités actuelles sont gratuites.</p></details>
         <details><summary>Le bot a-t-il accès à mon compte Steam ?</summary><p>Non. Il lit seulement les informations publiques de ton profil (pseudo et liste de jeux) via l'API officielle de Steam. Il ne demande jamais ton mot de passe.</p></details>
-        <details><summary>Le bot ne voit aucun de mes jeux, pourquoi ?</summary><p>Tes détails de jeux sont sûrement privés. Sur Steam : ton profil → Modifier le profil → Paramètres de confidentialité → « Détails des jeux : Public ». Puis tape <code>/profil</code> → ⚙️ Gérer mon compte → Steam → 🔄 Actualiser.</p></details>
+        <details><summary>Le bot ne voit aucun de mes jeux, pourquoi ?</summary><p>Tes détails de jeux sont sûrement privés. Sur Steam : ton profil → Modifier le profil → Paramètres de confidentialité → « Détails des jeux : Public ». Le bot relit ta bibliothèque tout seul dans les 12 h.</p></details>
         <details><summary>Le bot écoute-t-il le salon vocal ?</summary><p>Non. Il regarde seulement qui est connecté au salon au moment où tu tapes une commande, pour savoir qui fait partie de la squad. Il n'écoute rien et ne lit pas vos messages.</p></details>
         <details><summary>Comment supprimer mes données ?</summary><p>Tape <code>/mesdonnees</code> : tout est effacé immédiatement. Voir aussi la <a href="confidentialite.html">politique de confidentialité</a>.</p></details>
-        <details><summary>Un jeu possédé sur Game Pass et sur Steam, ça marche ensemble ?</summary><p>Seulement si le jeu propose le crossplay entre Steam et Xbox. Le bot écrit « crossplay ? » à côté de ces jeux pour que vous vérifiiez.</p></details>
+        <details><summary>Un jeu possédé sur Game Pass et sur Steam, ça marche ensemble ?</summary><p>Seulement si le jeu propose le crossplay entre Steam et Xbox : pensez à vérifier sur la page du jeu.</p></details>
       </div>
     </section>
 
