@@ -1,5 +1,6 @@
 /* La Squad : le style du logo (contours noirs épais, couleurs pleines, ombres franches sans flou).
-   Un seul thème, sombre, voulu. Polices hébergées ici (licence OFL, voir polices/). */
+   Un seul thème, sombre, voulu. Polices hébergées ici (licence OFL, voir polices/).
+   Après une modification : augmenter le ?v= de style.css dans les 3 pages (sinon le navigateur garde l'ancienne). */
 
 @font-face {
   font-family: "Archivo";
