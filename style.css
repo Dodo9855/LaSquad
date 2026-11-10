@@ -191,7 +191,7 @@ footer a:hover { color: var(--text); }
 
 /* ------------------------------------------------------------- grand écran */
 @media (min-width: 1100px) {
-  :root { --max: min(1600px, 90vw); }  /* la page suit la largeur de l'écran (moins de vide sur les côtés) */
+  :root { --max: min(2200px, 92vw); }  /* la page suit la largeur de l'écran (peu de vide sur les côtés) */
   body { font-size: 18px; }
   .hero .wrap { grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); padding-block: 64px 88px; }
   .hero h1 { font-size: clamp(64px, 5.6vw, 104px); }
@@ -210,6 +210,24 @@ footer a:hover { color: var(--text); }
   .commands dt:nth-last-of-type(-n+2), .commands dd:nth-last-of-type(-n+2) { border-bottom: 0; }
   .commands dd { border-right: 1px solid #2c2340; }
   .commands dd:nth-of-type(2n) { border-right: 0; }
+}
+
+/* Très grands écrans (2K, 4K) : tout un peu plus grand, pour remplir la largeur */
+@media (min-width: 1800px) {
+  body { font-size: 20px; }
+  .hero h1 { font-size: clamp(96px, 5.6vw, 132px); }
+  .hero p { font-size: 25px; max-width: 40rem; }
+  .card { padding: 28px; }
+  .card h3 { font-size: 36px; }
+  .minis .card h3 { font-size: 28px; }
+  .shot { font-size: 16px; }
+  .shot .who { font-size: 14.5px; }
+  .embed .t { font-size: 18px; }
+  .embed .k, .embed .s, .embed .m { font-size: 14px; }
+  .e { width: 18px; height: 18px; }
+  section h2.title { font-size: 48px; }
+  header.top nav { font-size: 17px; }
+  .logo { font-size: 24px; }
 }
 
 /* ------------------------------------------------------------ téléphone */
