@@ -109,6 +109,14 @@ header.top nav a.btn { color: var(--ink); }
 .hero .actions { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
 .hero-art { width: 100%; max-width: 440px; height: auto; display: block; margin-left: auto; filter: drop-shadow(8px 8px 0 var(--ink)); }
 
+/* Fonds pleine largeur : le contenu reste centré, les côtés ne sont plus vides */
+.hero { background: var(--night) url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'><g fill='none' stroke-width='3' stroke-linejoin='round' stroke-linecap='round'><g stroke='%23ff7a1a' stroke-opacity='.10'><path d='M30 40h40a16 16 0 0 1 15 11l7 22a7 7 0 0 1-11 7l-9-9H38l-9 9a7 7 0 0 1-11-7l7-22a16 16 0 0 1 15-11z'/><path d='M40 50v12M34 56h12'/><circle cx='62' cy='52' r='2.5'/><circle cx='70' cy='60' r='2.5'/></g><g stroke='%238b5cf6' stroke-opacity='.13' transform='translate(118 118) rotate(-14 55 60)'><path d='M30 40h40a16 16 0 0 1 15 11l7 22a7 7 0 0 1-11 7l-9-9H38l-9 9a7 7 0 0 1-11-7l7-22a16 16 0 0 1 15-11z'/><path d='M40 50v12M34 56h12'/><circle cx='62' cy='52' r='2.5'/><circle cx='70' cy='60' r='2.5'/></g></g></svg>") 0 0 / 220px 220px; border-bottom: 3px solid var(--ink); }
+.band-orange { background: var(--orange); border-bottom: 3px solid var(--ink); }
+.band-dark { background: #0a0710; border-top: 3px solid var(--ink); border-bottom: 3px solid var(--ink); }
+section.band-orange, section.band-dark { padding-block: 56px 64px; }
+.band-orange .card.light { background: #fff7ee; color: var(--ink); }
+.band-orange .card.light code { background: var(--ink); }
+
 /* --------------------------------------------------------- rubriques */
 section { padding-block: 24px 56px; }
 section h2.title { font-size: clamp(28px, 4vw, 40px); font-weight: 900; font-stretch: 110%; margin: 0 0 22px; line-height: 1.1; text-wrap: balance; }
@@ -191,7 +199,7 @@ footer a:hover { color: var(--text); }
 
 /* ------------------------------------------------------------- grand écran */
 @media (min-width: 1100px) {
-  :root { --max: min(2200px, 92vw); }  /* la page suit la largeur de l'écran (peu de vide sur les côtés) */
+  :root { --max: 1440px; }  /* largeur maximale habituelle ; les fonds des rubriques, eux, vont d'un bord à l'autre */
   body { font-size: 18px; }
   .hero .wrap { grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); padding-block: 64px 88px; }
   .hero h1 { font-size: clamp(64px, 5.6vw, 104px); }
@@ -212,22 +220,11 @@ footer a:hover { color: var(--text); }
   .commands dd:nth-of-type(2n) { border-right: 0; }
 }
 
-/* Très grands écrans (2K, 4K) : tout un peu plus grand, pour remplir la largeur */
+/* Très grands écrans (2K, 4K) : un peu plus grand, sans dépasser la largeur maximale */
 @media (min-width: 1800px) {
-  body { font-size: 20px; }
-  .hero h1 { font-size: clamp(96px, 5.6vw, 132px); }
-  .hero p { font-size: 25px; max-width: 40rem; }
-  .card { padding: 28px; }
-  .card h3 { font-size: 36px; }
-  .minis .card h3 { font-size: 28px; }
-  .shot { font-size: 16px; }
-  .shot .who { font-size: 14.5px; }
-  .embed .t { font-size: 18px; }
-  .embed .k, .embed .s, .embed .m { font-size: 14px; }
-  .e { width: 18px; height: 18px; }
-  section h2.title { font-size: 48px; }
-  header.top nav { font-size: 17px; }
-  .logo { font-size: 24px; }
+  body { font-size: 19px; }
+  .hero h1 { font-size: 104px; }
+  .card h3 { font-size: 32px; }
 }
 
 /* ------------------------------------------------------------ téléphone */
