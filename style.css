@@ -191,10 +191,12 @@ footer a:hover { color: var(--text); }
 
 /* ------------------------------------------------------------- grand écran */
 @media (min-width: 1100px) {
+  :root { --max: min(1600px, 90vw); }  /* la page suit la largeur de l'écran (moins de vide sur les côtés) */
   body { font-size: 18px; }
   .hero .wrap { grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); padding-block: 64px 88px; }
-  .hero h1 { font-size: clamp(64px, 6vw, 92px); }
-  .hero-art { max-width: 480px; }
+  .hero h1 { font-size: clamp(64px, 5.6vw, 104px); }
+  .hero p { font-size: 22px; max-width: 34rem; }
+  .hero-art { max-width: min(560px, 32vw); }
   /* Cartes de largeurs différentes (7 + 5 colonnes, puis 5 + 7) ; dans les larges, le texte à gauche
      et le message du bot à droite */
   .questions { grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 28px; }
