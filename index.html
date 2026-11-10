@@ -3,32 +3,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>La Squad — On joue à quoi ce soir ?</title>
-  <meta name="description" content="La Squad est un bot Discord 100 % français qui trouve les jeux que toute ta squad possède sur Steam, Game Pass, Epic et Battle.net, organise vos soirées (invitations, inscriptions, rappels) et prévient des promos.">
-  <meta property="og:title" content="La Squad — On joue à quoi ce soir ?">
-  <meta property="og:description" content="Le bot Discord qui trouve à quoi jouer avec tes potes en 10 secondes.">
+  <title>La Squad · Trouvez à quoi jouer ensemble</title>
+  <meta name="description" content="La Squad est un bot Discord en français : il compare les jeux Steam, Game Pass, Epic et Battle.net de tout le salon vocal, organise vos soirées (réponses en un clic, rappels) et prévient la squad des promos.">
+  <meta property="og:title" content="La Squad · Trouvez à quoi jouer ensemble">
+  <meta property="og:description" content="Le bot Discord qui compare les jeux de toute la squad, puis organise la soirée.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://lasquadbot.eu/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
 
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="theme-color" content="#0b0912">
+  <meta name="theme-color" content="#120e1a">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="polices/archivo.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="top">
     <div class="wrap">
-      <a class="logo" href="index.html"><img src="logo-96.png" alt="" width="34" height="34">La<span>Squad</span></a>
+      <a class="logo" href="index.html"><img src="logo-96.png" alt="" width="36" height="36">La Squad</a>
       <nav>
-        <a class="hide-mobile" href="#fonctionnalites">Fonctionnalités</a>
+        <a class="hide-mobile" href="#fonctionnalites">Ce qu'il fait</a>
         <a class="hide-mobile" href="#commandes">Commandes</a>
-        <a href="#faq">FAQ</a>
+        <a class="hide-mobile" href="#questions">Questions</a>
+        <!-- Remplace l'identifiant si tu changes d'application Discord -->
+        <a class="btn small" href="https://discord.com/oauth2/authorize?client_id=1562905950069727302&amp;scope=bot+applications.commands&amp;permissions=19456">Ajouter à Discord</a>
       </nav>
     </div>
   </header>
@@ -36,119 +39,144 @@
   <main>
     <section class="hero">
       <div class="wrap">
-        <img class="hero-emblem" src="embleme.png" alt="Logo La Squad : une squad de 4 joueurs devant une manette" width="300" height="249">
-        <span class="badge">Bot Discord 100 % en français</span>
-        <h1>On joue à quoi <em>ce soir</em>&nbsp;?</h1>
-        <p class="lead">
-          La Squad compare les jeux de toute ta squad (Steam, Game Pass, Epic, Battle.net…)
-          et te dit en 10 secondes à quoi vous pouvez jouer ensemble. Puis elle organise la soirée :
-          invitations, inscriptions et un rappel pour tout le monde.
-        </p>
-        <div class="actions">
-          <!-- Remplace l'identifiant si tu changes d'application Discord -->
-          <a class="btn" href="https://discord.com/oauth2/authorize?client_id=1562905950069727302&amp;scope=bot+applications.commands&amp;permissions=19456">➕ Ajouter à Discord</a>
-          <a class="btn ghost" href="#comment">Comment ça marche ?</a>
-        </div>
-
-        <div class="demos">
-        <div class="demo" aria-label="Exemple de réponse du bot">
-          <div class="cmd">Théo a utilisé <b>/nosjeux</b></div>
-          <div class="embed">
-            <h4>🎮 On joue à quoi ce soir ?</h4>
-            <small>Squad : Théo, Inès, Lucas, Sarah (4 joueurs)</small>
-            <ol>
-              <li><b>Deep Rock Galactic</b> — coop · jusqu'à 4</li>
-              <li><b>Valheim</b> — coop · jusqu'à 10</li>
-              <li><b>Apex Legends</b> — gratuit · PvP</li>
-            </ol>
-            <small>🎲 Au hasard</small>
+        <div>
+          <h1>Trouvez à quoi jouer <span class="mark">ensemble</span>.</h1>
+          <p>Un bot Discord qui compare les jeux de toute la squad, puis organise la soirée.</p>
+          <div class="actions">
+            <a class="btn" href="https://discord.com/oauth2/authorize?client_id=1562905950069727302&amp;scope=bot+applications.commands&amp;permissions=19456">Ajouter à Discord</a>
+            <a class="link" href="#commandes">Voir les commandes</a>
           </div>
         </div>
-        <div class="demo soiree" aria-label="Exemple de soirée organisée">
-          <div class="cmd">Inès a utilisé <b>/soiree</b></div>
-          <div class="embed">
-            <h4>📅 Valheim · samedi 21h00</h4>
-            <small>Organisée par Inès · 4 places · 2 potes invités en message privé</small>
-            <ul>
-              <li>✅ <b>Je viens</b> : Inès, Théo, Lucas</li>
-              <li>❔ <b>Peut-être</b> : Sarah</li>
-            </ul>
-            <small>⏰ Rappel en message privé 30 min avant, et une annonce dans le salon</small>
-          </div>
-        </div>
-        </div>
+        <img class="hero-art" src="embleme.png" alt="Le logo de La Squad : quatre joueurs devant une manette orange" width="640" height="532">
       </div>
     </section>
 
     <section id="fonctionnalites">
       <div class="wrap">
-        <h2>Tout ce qu'il faut pour vos soirées</h2>
-        <p class="sub">Pensé pour les groupes d'amis qui jouent sur PC, sans prise de tête.</p>
-        <div class="grid">
-          <div class="card"><div class="icon">🎮</div><h3>Jeux en commun</h3><p>Les jeux multijoueurs que tout le salon vocal possède, triés par ce que vous jouez le plus.</p></div>
-          <div class="card wide"><div class="icon">📅</div><h3>Soirées organisées</h3><p>« Samedi 21 h sur Valheim ? » Invitations en message privé, inscriptions par boutons, places limitées, un rappel en message privé avant le début et une annonce dans le salon. La soirée peut revenir toute seule chaque semaine, et <code>/messoirees</code> rassemble les tiennes sur tous tes serveurs.</p></div>
-          <div class="card"><div class="icon">🟩</div><h3>Game Pass, Epic, Battle.net</h3><p>Pas que Steam : active le Game Pass ou ajoute tes jeux Epic, Riot, Battle.net en un clic.</p></div>
-          <div class="card"><div class="icon">👪</div><h3>Famille Steam</h3><p>Les jeux que ta famille Steam te prête comptent aussi, et le bot vérifie qu'il y a assez d'exemplaires pour jouer tous ensemble.</p></div>
-          <div class="card"><div class="icon">🎲</div><h3>Tirage au sort</h3><p>Un clic sur 🎲 et le hasard choisit, relancez autant de fois que vous voulez.</p></div>
-          <div class="card"><div class="icon">🆓</div><h3>Jeux gratuits</h3><p>Les jeux offerts sur Epic chaque jeudi, et ceux donnés sur Steam, GOG, Prime Gaming… dès qu'ils apparaissent.</p></div>
-          <div class="card"><div class="icon">🎁</div><h3>Récap du mois</h3><p>Chaque mois, le récap de la squad : soirées, jeux préférés et MVP. À partager !</p></div>
-          <div class="card"><div class="icon">🔥</div><h3>Alertes promo</h3><p>Le bot prévient la squad quand un jeu qu'il manque à certains passe en promo, et toi en message privé quand un jeu de ta liste de souhaits Steam est en promo.</p></div>
-          <div class="card"><div class="icon">⚙️</div><h3>Réglages en un écran</h3><p>Les admins règlent tout dans <code>/reglages</code>, sur un seul écran.</p></div>
+        <div class="questions">
+          <div class="card orange">
+            <h3>On a quoi en commun&nbsp;?</h3>
+            <p><code>/nosjeux</code> dans le vocal&nbsp;: les jeux multijoueurs que vous avez <strong>tous</strong>, avec assez de places pour tout le monde. Ceux que vous jouez le plus passent en premier.</p>
+            <figure class="shot" aria-label="Exemple de réponse à /nosjeux">
+              <div class="who"><span class="ava a1"></span><b>Théo</b> a utilisé <span class="slash">/nosjeux</span></div>
+              <div class="embed">
+                <div class="k"><img class="e" src="emojis/pad.png" alt=""> Jeu 1 sur 7 en commun · 4 joueurs</div>
+                <div class="t">Deep Rock Galactic</div>
+                <div>Coop jusqu'à 4 · mineurs nains dans l'espace</div>
+                <div class="tile wide g1">DEEP ROCK GALACTIC</div>
+                <div class="s"><img class="e" src="emojis/square_blue.png" alt=""> Steam · <img class="e" src="emojis/square.png" alt=""> Game Pass</div>
+              </div>
+              <div class="dbtn"><span>◀</span><span>▶</span><span><img class="e" src="emojis/dice.png" alt=""> Au hasard</span><span><img class="e" src="emojis/people.png" alt=""> Joueurs</span></div>
+            </figure>
+          </div>
+
+          <div class="card violet">
+            <h3>Qui vient samedi&nbsp;?</h3>
+            <p><code>/soiree</code>&nbsp;: un jeu, une heure, des places. Chacun répond en un clic et les potes absents sont invités en message privé.</p>
+            <figure class="shot" aria-label="Exemple de soirée organisée avec /soiree">
+              <div class="who"><span class="ava a2"></span><b>Inès</b> a utilisé <span class="slash">/soiree</span></div>
+              <div class="embed">
+                <div class="k"><img class="e" src="emojis/cal.png" alt=""> Soirée · samedi 21 h</div>
+                <div class="t">Valheim</div>
+                <div><img class="e" src="emojis/check.png" alt=""> <b>Je viens</b> · Inès, Théo, Lucas<br><img class="e" src="emojis/maybe.png" alt=""> <b>Peut-être</b> · Sarah<br><span class="m">1 place libre sur 4</span></div>
+              </div>
+              <div class="dbtn"><span><img class="e" src="emojis/check.png" alt=""> Je viens</span><span><img class="e" src="emojis/maybe.png" alt=""> Peut-être</span><span>Pas dispo</span></div>
+            </figure>
+            <figure class="shot" aria-label="Exemple de rappel en message privé">
+              <div class="who"><img class="ava" src="logo-96.png" alt=""><b>La Squad</b> · message privé</div>
+              <div class="embed">
+                <div class="k"><img class="e" src="emojis/bell.png" alt=""> Rappel · dans 30 min</div>
+                <div><b>Valheim</b> commence à 21 h avec Inès, Théo et Lucas.</div>
+              </div>
+            </figure>
+          </div>
+
+          <div class="card">
+            <h3>Il joue à quoi, lui&nbsp;?</h3>
+            <p><code>/profil</code>&nbsp;: la carte d'un joueur, ce à quoi il joue en ce moment, sa prochaine soirée et vos jeux en commun.</p>
+            <figure class="shot" aria-label="Exemple de carte /profil">
+              <div class="who"><span class="ava a3"></span><b>Lucas</b> a utilisé <span class="slash">/profil</span></div>
+              <div class="embed v2">
+                <div class="t">Lucas</div>
+                <div class="s"><img class="e" src="emojis/square_blue.png" alt=""> Steam : <a href="#fonctionnalites">lucas_fr</a><br><img class="e" src="emojis/square.png" alt=""> Game Pass : <img class="e" src="emojis/check.png" alt="oui"></div>
+                <hr>
+                <div class="s"><img class="e" src="emojis/pad.png" alt=""> Joue en ce moment à <b>Helldivers 2</b><br><img class="e" src="emojis/target.png" alt=""> Action · Coop · Survie</div>
+                <div class="gallery"><div class="tile g3">HELLDIVERS 2</div><div class="tile g2">VALHEIM</div><div class="tile g1">DEEP ROCK</div><div class="tile g4">LETHAL CO.</div></div>
+              </div>
+            </figure>
+          </div>
+
+          <div class="card">
+            <h3>C'est en promo&nbsp;?</h3>
+            <p>Quand un jeu qui manque à une partie de la squad baisse, le salon est prévenu. Et toi en message privé pour ta liste de souhaits Steam.</p>
+            <figure class="shot" aria-label="Exemple d'alerte promo">
+              <div class="who"><img class="ava" src="logo-96.png" alt=""><b>La Squad</b> · #bons-plans</div>
+              <div class="embed">
+                <div class="k"><img class="e" src="emojis/fire.png" alt=""> Promo · il manque à 2 joueurs de la squad</div>
+                <div class="t">Lethal Company <span class="price">−40 %</span></div>
+                <div>5,99 € au lieu de 9,99 € · Sarah et Lucas ne l'ont pas</div>
+              </div>
+            </figure>
+            <p class="more">Et chaque jeudi, les jeux offerts sur Epic, Steam, GOG…</p>
+          </div>
+        </div>
+
+        <div class="minis">
+          <div class="card">
+            <h3>Pas que Steam</h3>
+            <p>Game Pass, Epic, Battle.net, Riot&nbsp;: tout compte. Les jeux prêtés par ta famille Steam aussi.</p>
+          </div>
+          <div class="card">
+            <h3>C'est quoi, ce jeu&nbsp;?</h3>
+            <p><code>/jeu</code>&nbsp;: description, prix, avis Steam, et qui l'a déjà dans la squad.</p>
+          </div>
+          <div class="card">
+            <h3>Et ce mois-ci&nbsp;?</h3>
+            <p><code>/recap</code>&nbsp;: les soirées du mois, les jeux joués et les MVP de la squad.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="comment">
+    <section id="demarrer">
       <div class="wrap">
-        <h2>Comment ça marche ?</h2>
-        <p class="sub">Trois étapes, moins d'une minute.</p>
-        <div class="steps">
-          <div class="step"><h3>Ajoute le bot</h3><p>Clique sur « Ajouter à Discord » et choisis ton serveur.</p></div>
-          <div class="step"><h3>Enregistre tes jeux</h3><p>Tape <code>/profil</code> : relie ton Steam, active le Game Pass si tu l'as, ajoute le reste en un clic.</p></div>
-          <div class="step"><h3>Rejoins le vocal</h3><p>Avec tes potes, tape <code>/nosjeux</code>. C'est tout !</p></div>
-        </div>
+        <h2 class="title">Prêt en trois commandes</h2>
+        <ol class="start">
+          <li><code>/profil</code><span>chacun relie son compte Steam</span></li>
+          <li><span class="kbd">vocal</span><span>rejoignez le même salon</span></li>
+          <li><code>/nosjeux</code><span>et choisissez</span></li>
+        </ol>
       </div>
     </section>
 
     <section id="commandes">
       <div class="wrap">
-        <h2>Les commandes</h2>
-        <p class="sub">Toutes en français, toutes avec des explications dans Discord.</p>
-        <div class="table-scroll">
-          <table class="commands">
-            <tr><td><code>/nosjeux</code></td><td>Les jeux multijoueurs que tout le salon vocal possède, un jeu à la fois avec sa description ou en liste, avec filtres et un bouton « Au hasard ».</td></tr>
-            <tr><td><code>/jeu</code></td><td>La fiche d'un jeu : description, prix, avis Steam, et qui l'a dans ta squad. Le nombre de joueurs est faux ? Corrige-le d'un clic.</td></tr>
-            <tr><td><code>/nouveautes</code></td><td>Les nouveautés, tendances et sorties à venir sur Steam, un jeu à la fois avec sa description (ou en liste), à filtrer (solo, coop, PvP, gratuits, prix…) et à trier. Et les jeux offerts en ce moment sur Epic, Steam, GOG…</td></tr>
-            <tr><td><code>/soiree</code></td><td>Organise une soirée (une heure et, si besoin, un jour : ex. 21h, samedi) avec inscriptions, invitations en message privé, rappels et annonce. Elle peut revenir toute seule chaque semaine. Avant de la créer, tu vois qui a le jeu sur le serveur.</td></tr>
-            <tr><td><code>/messoirees</code></td><td>Tes soirées à venir sur tous tes serveurs : celles où tu viens et celles que tu organises, avec tes rappels et tes soirées récurrentes.</td></tr>
-            <tr><td><code>/recap</code></td><td>Le récap du mois de la squad, publié automatiquement chaque 1er du mois.</td></tr>
-            <tr><td><code>/profil</code></td><td>Ta carte de joueur (jeux les plus joués, ceux du moment, genres préférés) : lie ton Steam et gère tes jeux (Game Pass, Epic, Battle.net, Riot…), tes alertes perso, qui peut voir ta carte et tes données, ou regarde la carte d'un pote.</td></tr>
-            <tr><td><code>/aide</code></td><td>Le mode d'emploi, par thème.</td></tr>
-            <tr><td><code>/mesdonnees</code></td><td>Efface toutes tes données, immédiatement.</td></tr>
-            <tr><td><code>/reglages</code></td><td>Admins : alertes promo et jeux gratuits, récap du mois, soirées, recherches et accès.</td></tr>
-          </table>
-        </div>
+        <h2 class="title">Les commandes</h2>
+        <dl class="commands">
+          <dt><code>/nosjeux</code></dt><dd>Les jeux multijoueurs que tout le salon vocal possède, un à la fois ou en liste, avec des filtres et un tirage au sort.</dd>
+          <dt><code>/soiree</code></dt><dd>Organise une soirée sur un jeu&nbsp;: réponses en un clic, invitations en privé, rappel avant le début. Elle peut revenir chaque semaine.</dd>
+          <dt><code>/messoirees</code></dt><dd>Tes soirées à venir sur tous tes serveurs, celles où tu viens et celles que tu organises.</dd>
+          <dt><code>/jeu</code></dt><dd>La fiche d'un jeu&nbsp;: description, prix, avis Steam et qui l'a dans ta squad.</dd>
+          <dt><code>/profil</code></dt><dd>Ta carte de joueur, tes comptes (Steam, Game Pass, Epic, Riot…) et tes réglages, ou la carte d'un pote.</dd>
+          <dt><code>/nouveautes</code></dt><dd>Les nouveautés, tendances et sorties Steam, et les jeux offerts du moment.</dd>
+          <dt><code>/recap</code></dt><dd>Le récap du mois de la squad, publié tout seul chaque 1er du mois.</dd>
+          <dt><code>/aide</code></dt><dd>Le mode d'emploi, par thème.</dd>
+          <dt><code>/mesdonnees</code></dt><dd>Efface toutes tes données, tout de suite.</dd>
+          <dt><code>/reglages</code></dt><dd>Pour les admins&nbsp;: alertes promo, récap du mois, soirées et accès.</dd>
+        </dl>
       </div>
     </section>
 
-    <section id="faq">
-      <div class="wrap narrow">
-        <h2>Questions fréquentes</h2>
-        <p class="sub">&nbsp;</p>
-        <details><summary>C'est gratuit ?</summary><p>Oui, toutes les fonctionnalités actuelles sont gratuites.</p></details>
-        <details><summary>Le bot a-t-il accès à mon compte Steam ?</summary><p>Non. Il lit seulement les informations publiques de ton profil (pseudo et liste de jeux) via l'API officielle de Steam. Il ne demande jamais ton mot de passe.</p></details>
-        <details><summary>Le bot ne voit aucun de mes jeux, pourquoi ?</summary><p>Tes détails de jeux sont sûrement privés. Sur Steam : ton profil → Modifier le profil → Paramètres de confidentialité → « Détails des jeux : Public ». Le bot relit ta bibliothèque tout seul dans les 12 h.</p></details>
-        <details><summary>Le bot écoute-t-il le salon vocal ?</summary><p>Non. Il regarde seulement qui est connecté au salon au moment où tu tapes une commande, pour savoir qui fait partie de la squad. Il n'écoute rien et ne lit pas vos messages.</p></details>
-        <details><summary>Comment supprimer mes données ?</summary><p>Tape <code>/mesdonnees</code> : tout est effacé immédiatement. Voir aussi la <a href="confidentialite.html">politique de confidentialité</a>.</p></details>
-        <details><summary>Un jeu possédé sur Game Pass et sur Steam, ça marche ensemble ?</summary><p>Seulement si le jeu propose le crossplay entre Steam et Xbox : pensez à vérifier sur la page du jeu.</p></details>
-      </div>
-    </section>
-
-    <section class="cta">
+    <section id="questions">
       <div class="wrap">
-        <h2>Prêt pour ce soir ?</h2>
-        <p class="sub">Ajoute La Squad et lance ta première partie en moins d'une minute.</p>
-        <a class="btn" href="https://discord.com/oauth2/authorize?client_id=1562905950069727302&amp;scope=bot+applications.commands&amp;permissions=19456">➕ Ajouter à Discord</a>
+        <h2 class="title">Questions</h2>
+        <div class="faq">
+          <details><summary>Le bot a-t-il accès à mon compte Steam&nbsp;?</summary><p>Non. Tu te connectes sur la page officielle de Steam, qui confirme seulement que le compte est à toi. Le bot lit ensuite tes informations publiques (pseudo et liste de jeux) et ne voit jamais ton mot de passe.</p></details>
+          <details><summary>Le bot ne voit aucun de mes jeux, pourquoi&nbsp;?</summary><p>Tes détails de jeux sont sûrement privés. Sur Steam&nbsp;: ton profil, Modifier le profil, Paramètres de confidentialité, puis «&nbsp;Détails des jeux&nbsp;: Public&nbsp;». Le bot relit ta bibliothèque tout seul dans les 12 h.</p></details>
+          <details><summary>Le bot écoute-t-il le salon vocal&nbsp;?</summary><p>Non. Il regarde seulement qui est connecté au salon quand tu tapes une commande, pour savoir qui fait partie de la squad. Il n'écoute rien et ne lit pas vos messages.</p></details>
+          <details><summary>Un jeu sur Game Pass et un autre sur Steam, ça marche ensemble&nbsp;?</summary><p>Seulement si le jeu propose le crossplay entre Steam et Xbox. Vérifie sur la page du jeu.</p></details>
+          <details><summary>Comment supprimer mes données&nbsp;?</summary><p>Tape <code>/mesdonnees</code>&nbsp;: tout est effacé tout de suite. Voir aussi la <a href="confidentialite.html">politique de confidentialité</a>.</p></details>
+        </div>
       </div>
     </section>
   </main>
@@ -160,7 +188,7 @@
         <a href="confidentialite.html">Confidentialité</a>
         <a href="cgu.html#mentions-legales">Mentions légales</a>
       </div>
-      <div>La Squad n'est pas affilié à Discord, Valve, Microsoft ou aux éditeurs cités.</div>
+      <div>La Squad n'est pas affilié à Discord, Valve, Microsoft ni aux éditeurs cités.</div>
     </div>
   </footer>
 </body>
