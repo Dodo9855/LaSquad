@@ -17,15 +17,20 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="theme-color" content="#120e1a">
   <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preload" href="polices/archivo.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="preload" href="loutre/canape.webp" as="image">
+  <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
+  <div class="promo">
+    <div class="wrap"><span>Nouveau : les jeux offerts de la semaine, annoncés chaque jeudi dans ton salon</span><a href="#promos">Voir</a></div>
+  </div>
+
   <header class="top">
     <div class="wrap">
-      <a class="logo" href="index.html"><img src="logo-96.png" alt="" width="34" height="34">La Squad</a>
+      <a class="logo" href="index.html"><img src="logo-96.png" alt="" width="40" height="40">La Squad</a>
       <nav>
         <a class="hide-mobile" href="#fonctions">Fonctions</a>
         <a class="hide-mobile" href="#commandes">Commandes</a>
@@ -38,59 +43,115 @@
 
   <main>
     <section class="hero">
+      <div class="sky" aria-hidden="true"><span class="moon"></span></div>
       <div class="wrap">
-        <div>
-          <h1>Trouvez à quoi jouer <span class="mark">ensemble</span>.</h1>
-          <p>Le bot Discord qui compare les jeux de toute la squad, vous dit lesquels vous avez tous, puis organise la soirée.</p>
-          <div class="actions">
+        <div class="hero-txt">
+          <h1 class="load">Trouvez à quoi jouer <span class="hl">ensemble</span></h1>
+          <p class="load d1">Le bot Discord qui compare les jeux de toute la squad, vous dit lesquels vous avez tous, puis organise la soirée. Il ne reste plus qu'à lancer la partie.</p>
+          <div class="actions load d2">
             <a class="btn" href="https://discord.com/oauth2/authorize?client_id=1562905950069727302&amp;scope=bot+applications.commands&amp;permissions=19456">Ajouter à Discord</a>
-            <a class="link" href="#fonctions">Voir comment ça marche <span class="arrow">→</span></a>
+            <a class="btn ghost" href="#fonctions">Voir les fonctionnalités</a>
           </div>
         </div>
-        <img class="hero-art" src="embleme.png" alt="Le logo de La Squad : quatre joueurs devant une manette orange" width="640" height="532">
+        <div class="scene">
+          <img class="o canape flip" src="loutre/canape.webp" alt="La loutre de La Squad, casquette violette et manette en main, sur son canapé" width="900" height="877">
+        </div>
+      </div>
+      <svg class="skyline" viewBox="0 0 1400 220" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><g class="far"><rect x="0" y="120" width="70" height="100"/><rect class="w2" x="8" y="152" width="6" height="9" rx="1"/><rect class="w3" x="8" y="170" width="6" height="9" rx="1"/><rect x="70" y="96" width="60" height="124"/><rect class="w3" x="110" y="146" width="6" height="9" rx="1"/><rect x="130" y="130" width="90" height="90"/><rect class="w2" x="138" y="144" width="6" height="9" rx="1"/><rect class="w1" x="154" y="180" width="6" height="9" rx="1"/><rect class="w1" x="202" y="198" width="6" height="9" rx="1"/><rect x="220" y="80" width="50" height="140"/><rect x="270" y="110" width="80" height="110"/><rect class="w2" x="310" y="124" width="6" height="9" rx="1"/><rect class="w2" x="278" y="160" width="6" height="9" rx="1"/><rect class="w3" x="326" y="178" width="6" height="9" rx="1"/><rect x="350" y="60" width="66" height="160"/><rect class="w1" x="390" y="74" width="6" height="9" rx="1"/><rect class="w3" x="358" y="146" width="6" height="9" rx="1"/><rect class="w2" x="374" y="164" width="6" height="9" rx="1"/><rect class="w3" x="374" y="182" width="6" height="9" rx="1"/><rect x="416" y="100" width="100" height="120"/><rect class="w2" x="472" y="132" width="6" height="9" rx="1"/><rect class="w2" x="472" y="150" width="6" height="9" rx="1"/><rect class="w1" x="424" y="186" width="6" height="9" rx="1"/><rect x="516" y="70" width="58" height="150"/><rect x="574" y="120" width="90" height="100"/><rect class="w1" x="614" y="152" width="6" height="9" rx="1"/><rect class="w3" x="582" y="188" width="6" height="9" rx="1"/><rect x="664" y="84" width="70" height="136"/><rect class="w2" x="672" y="116" width="6" height="9" rx="1"/><rect class="w3" x="704" y="116" width="6" height="9" rx="1"/><rect class="w3" x="704" y="152" width="6" height="9" rx="1"/><rect x="734" y="104" width="110" height="116"/><rect class="w1" x="822" y="136" width="6" height="9" rx="1"/><rect class="w2" x="742" y="154" width="6" height="9" rx="1"/><rect class="w1" x="742" y="190" width="6" height="9" rx="1"/><rect x="844" y="66" width="60" height="154"/><rect class="w1" x="868" y="134" width="6" height="9" rx="1"/><rect class="w3" x="868" y="188" width="6" height="9" rx="1"/><rect x="904" y="118" width="84" height="102"/><rect class="w1" x="976" y="132" width="6" height="9" rx="1"/><rect class="w2" x="944" y="150" width="6" height="9" rx="1"/><rect x="988" y="90" width="76" height="130"/><rect class="w1" x="1044" y="158" width="6" height="9" rx="1"/><rect class="w3" x="1028" y="194" width="6" height="9" rx="1"/><rect class="w3" x="1044" y="194" width="6" height="9" rx="1"/><rect x="1064" y="126" width="96" height="94"/><rect class="w2" x="1120" y="140" width="6" height="9" rx="1"/><rect class="w1" x="1120" y="158" width="6" height="9" rx="1"/><rect class="w1" x="1136" y="158" width="6" height="9" rx="1"/><rect class="w1" x="1136" y="194" width="6" height="9" rx="1"/><rect x="1160" y="100" width="64" height="120"/><rect class="w2" x="1184" y="114" width="6" height="9" rx="1"/><rect class="w3" x="1200" y="114" width="6" height="9" rx="1"/><rect x="1224" y="74" width="90" height="146"/><rect class="w1" x="1248" y="88" width="6" height="9" rx="1"/><rect class="w1" x="1296" y="106" width="6" height="9" rx="1"/><rect class="w1" x="1296" y="124" width="6" height="9" rx="1"/><rect x="1314" y="112" width="70" height="108"/><rect class="w3" x="1370" y="126" width="6" height="9" rx="1"/><rect class="w1" x="1322" y="180" width="6" height="9" rx="1"/></g><g class="near"><rect x="0" y="150" width="110" height="70"/><rect class="w3" x="24" y="164" width="6" height="9" rx="1"/><rect class="w3" x="40" y="164" width="6" height="9" rx="1"/><rect class="w3" x="24" y="182" width="6" height="9" rx="1"/><rect class="w3" x="72" y="182" width="6" height="9" rx="1"/><rect class="w1" x="8" y="200" width="6" height="9" rx="1"/><rect class="w3" x="56" y="200" width="6" height="9" rx="1"/><rect class="w3" x="88" y="200" width="6" height="9" rx="1"/><rect x="110" y="140" width="70" height="80"/><rect class="w2" x="118" y="154" width="6" height="9" rx="1"/><rect class="w2" x="118" y="190" width="6" height="9" rx="1"/><rect x="180" y="160" width="100" height="60"/><rect class="w1" x="268" y="174" width="6" height="9" rx="1"/><rect x="280" y="126" width="80" height="94"/><rect class="w2" x="304" y="158" width="6" height="9" rx="1"/><rect class="w2" x="304" y="176" width="6" height="9" rx="1"/><rect class="w1" x="320" y="176" width="6" height="9" rx="1"/><rect x="360" y="146" width="120" height="74"/><rect class="w3" x="416" y="160" width="6" height="9" rx="1"/><rect class="w1" x="448" y="160" width="6" height="9" rx="1"/><rect class="w2" x="368" y="178" width="6" height="9" rx="1"/><rect class="w1" x="448" y="178" width="6" height="9" rx="1"/><rect x="480" y="118" width="90" height="102"/><rect class="w1" x="552" y="132" width="6" height="9" rx="1"/><rect class="w1" x="488" y="150" width="6" height="9" rx="1"/><rect class="w2" x="552" y="150" width="6" height="9" rx="1"/><rect class="w1" x="536" y="168" width="6" height="9" rx="1"/><rect class="w1" x="504" y="204" width="6" height="9" rx="1"/><rect x="570" y="150" width="76" height="70"/><rect class="w1" x="610" y="182" width="6" height="9" rx="1"/><rect class="w1" x="626" y="200" width="6" height="9" rx="1"/><rect x="646" y="132" width="120" height="88"/><rect class="w2" x="670" y="164" width="6" height="9" rx="1"/><rect class="w3" x="718" y="164" width="6" height="9" rx="1"/><rect class="w1" x="734" y="164" width="6" height="9" rx="1"/><rect class="w1" x="734" y="182" width="6" height="9" rx="1"/><rect x="766" y="160" width="84" height="60"/><rect class="w2" x="774" y="174" width="6" height="9" rx="1"/><rect class="w3" x="838" y="174" width="6" height="9" rx="1"/><rect class="w2" x="838" y="192" width="6" height="9" rx="1"/><rect x="850" y="128" width="100" height="92"/><rect class="w1" x="874" y="160" width="6" height="9" rx="1"/><rect class="w3" x="858" y="178" width="6" height="9" rx="1"/><rect class="w3" x="906" y="178" width="6" height="9" rx="1"/><rect class="w1" x="922" y="178" width="6" height="9" rx="1"/><rect class="w3" x="906" y="196" width="6" height="9" rx="1"/><rect class="w1" x="922" y="196" width="6" height="9" rx="1"/><rect x="950" y="152" width="116" height="68"/><rect class="w2" x="958" y="166" width="6" height="9" rx="1"/><rect class="w1" x="958" y="184" width="6" height="9" rx="1"/><rect class="w3" x="1006" y="184" width="6" height="9" rx="1"/><rect class="w1" x="1022" y="202" width="6" height="9" rx="1"/><rect x="1066" y="138" width="90" height="82"/><rect class="w1" x="1074" y="170" width="6" height="9" rx="1"/><rect class="w3" x="1138" y="170" width="6" height="9" rx="1"/><rect x="1156" y="124" width="110" height="96"/><rect class="w2" x="1180" y="138" width="6" height="9" rx="1"/><rect class="w3" x="1196" y="156" width="6" height="9" rx="1"/><rect class="w3" x="1212" y="156" width="6" height="9" rx="1"/><rect class="w1" x="1164" y="174" width="6" height="9" rx="1"/><rect class="w2" x="1244" y="192" width="6" height="9" rx="1"/><rect x="1266" y="156" width="80" height="64"/><rect class="w3" x="1306" y="170" width="6" height="9" rx="1"/><rect x="1346" y="142" width="90" height="78"/></g><rect class="roof" x="0" y="206" width="1400" height="14"/></svg>
+    </section>
+
+    <section class="trust">
+      <div class="wrap"><p>Marche avec les jeux de toute la squad</p></div>
+      <div class="marquee">
+        <div class="track">
+          <ul class="plats"><li>Steam</li><li>Game Pass</li><li>Epic Games</li><li>Battle.net</li><li>Riot</li><li>Famille Steam</li></ul>
+          <ul class="plats" aria-hidden="true"><li>Steam</li><li>Game Pass</li><li>Epic Games</li><li>Battle.net</li><li>Riot</li><li>Famille Steam</li></ul>
+          <ul class="plats" aria-hidden="true"><li>Steam</li><li>Game Pass</li><li>Epic Games</li><li>Battle.net</li><li>Riot</li><li>Famille Steam</li></ul>
+          <ul class="plats" aria-hidden="true"><li>Steam</li><li>Game Pass</li><li>Epic Games</li><li>Battle.net</li><li>Riot</li><li>Famille Steam</li></ul>
+        </div>
       </div>
     </section>
 
-    <div class="works">
-      <div class="wrap"><span>Marche avec</span><b><img class="e" src="emojis/square_blue.png" alt=""> Steam</b><b><img class="e" src="emojis/square.png" alt=""> Game Pass</b><b>Epic Games</b><b>Battle.net</b><b>Riot</b><b>Famille Steam</b></div>
-    </div>
+    <section class="block steps-block">
+      <div class="wrap">
+        <div>
+          <h2 class="h2 reveal">Prêt en 3 étapes</h2>
+          <ol class="steps">
+            <li class="reveal"><h3>Ajoute le bot</h3><p>«&nbsp;Ajouter à Discord&nbsp;», puis choisis ton serveur.</p></li>
+            <li class="reveal"><h3>Relie ton Steam</h3><p>Chacun tape <code>/profil</code> et se connecte avec Steam.</p></li>
+            <li class="reveal"><h3>Rejoignez le vocal</h3><p>Tapez <code>/nosjeux</code> et choisissez.</p></li>
+          </ol>
+        </div>
+        <img class="steps-otter reveal-l" src="loutre/coucou.webp" alt="" width="357" height="520" loading="lazy">
+      </div>
+    </section>
+
+    <section class="feat rev squad" id="squad">
+      <div class="wrap">
+        <div class="txt reveal">
+          <span class="kick"><img class="e" src="emojis/people.png" alt="">Le principe</span>
+          <h2>Ta squad, c'est ton vocal</h2>
+          <p>Pas de groupe à créer ni de liste à tenir à jour. Quand tu tapes <code>/nosjeux</code>, La Squad regarde qui est avec toi dans le salon vocal : c'est ta squad du soir.</p>
+          <ul class="checks">
+            <li><img class="e" src="emojis/check.png" alt=""><span>Chacun relie ses comptes une seule fois avec <code>/profil</code></span></li>
+            <li><img class="e" src="emojis/check.png" alt=""><span>À 3 ce soir, à 6 samedi : le bot ne garde que les jeux avec assez de places pour tout le monde</span></li>
+            <li><img class="e" src="emojis/check.png" alt=""><span>Les jeux qui manquent à un ou deux d'entre vous sont repérés, et le salon est prévenu quand ils sont en promo</span></li>
+          </ul>
+        </div>
+        <div class="visual reveal-l">
+<figure class="shot vocal" aria-label="Exemple : quatre potes dans un salon vocal, puis /nosjeux">
+<div class="vc-head"><span class="spk"></span>Soirée jeux<span class="m">4 dans le vocal</span></div>
+<ul class="vc-list">
+<li><span class="ava a1 talk"></span><b>Théo</b><span class="tags">Steam · Game Pass</span></li>
+<li><span class="ava a2"></span><b>Inès</b><span class="tags">Steam</span></li>
+<li><span class="ava a3"></span><b>Lucas</b><span class="tags">Steam · Epic</span></li>
+<li><span class="ava a4"></span><b>Sarah</b><span class="tags">Steam · Battle.net</span></li>
+</ul>
+<div class="vc-arrow"><span class="slash">/nosjeux</span></div>
+<div class="vc-result"><img class="e" src="emojis/pad.png" alt=""><span><b>7 jeux</b> que vous avez tous les quatre</span></div>
+</figure>
+          <img class="mascot right flip" src="loutre/pouf.webp" alt="" width="463" height="520" loading="lazy">
+        </div>
+      </div>
+    </section>
 
     <div id="fonctions">
     <section class="feat">
       <div class="wrap">
-        <div class="txt">
-          <span class="num">01</span>
+        <div class="txt reveal">
+          <span class="kick"><img class="e" src="emojis/pad.png" alt="">/nosjeux</span>
           <h2>Les jeux que vous avez tous</h2>
           <p>Dans le vocal, tape <code>/nosjeux</code>. Le bot compare les bibliothèques de tout le monde et ne garde que les jeux multijoueurs avec assez de places pour la squad.</p>
-          <ul>
+          <ul class="checks">
             <li><img class="e" src="emojis/check.png" alt=""><span>Les jeux que vous jouez le plus passent en premier</span></li>
             <li><img class="e" src="emojis/check.png" alt=""><span>Des filtres : coop, PvP, gratuits…</span></li>
             <li><img class="e" src="emojis/check.png" alt=""><span>Un tirage au sort quand personne ne se décide</span></li>
           </ul>
         </div>
-        <div class="media">
+        <div class="visual reveal-r">
 <figure class="shot" aria-label="Exemple : réponse à /nosjeux">
 <div class="who"><span class="ava a1"></span><b>Théo</b> a utilisé <span class="slash">/nosjeux</span></div>
 <div class="embed"><div class="k"><img class="e" src="emojis/pad.png" alt=""> Jeu 1 sur 7 en commun · 4 joueurs</div><div class="t">Deep Rock Galactic</div><div>Coop jusqu'à 4 · mineurs nains dans l'espace</div><div class="tile g1">DEEP ROCK GALACTIC</div><div class="s"><img class="e" src="emojis/square_blue.png" alt=""> Steam · <img class="e" src="emojis/square.png" alt=""> Game Pass</div></div>
 <div class="dbtn"><span>◀</span><span>▶</span><span><img class="e" src="emojis/dice.png" alt=""> Au hasard</span><span><img class="e" src="emojis/people.png" alt=""> Joueurs</span></div>
 </figure>
+          <img class="mascot left" src="loutre/manette.webp" alt="" width="309" height="560" loading="lazy">
         </div>
       </div>
     </section>
 
     <section class="feat rev">
       <div class="wrap">
-        <div class="txt">
-          <span class="num">02</span>
+        <div class="txt reveal">
+          <span class="kick"><img class="e" src="emojis/cal.png" alt="">/soiree</span>
           <h2>Une soirée organisée en un message</h2>
-          <p><code>/soiree</code> : un jeu, une heure, le nombre de places. Chacun répond en un clic et le bot s'occupe du reste.</p>
-          <ul>
+          <p>Un jeu, une heure, le nombre de places. Chacun répond en un clic et le bot s'occupe du reste.</p>
+          <ul class="checks">
             <li><img class="e" src="emojis/check.png" alt=""><span>Les potes absents sont invités en message privé</span></li>
             <li><img class="e" src="emojis/check.png" alt=""><span>Un rappel avant le début</span></li>
             <li><img class="e" src="emojis/check.png" alt=""><span>Elle peut revenir chaque semaine</span></li>
           </ul>
         </div>
-        <div class="media">
+        <div class="visual reveal-l">
 <figure class="shot" aria-label="Exemple : soirée organisée avec /soiree, puis le rappel">
 <div class="who"><span class="ava a2"></span><b>Inès</b> a utilisé <span class="slash">/soiree</span></div>
 <div class="embed"><div class="k"><img class="e" src="emojis/cal.png" alt=""> Soirée · samedi 21 h</div><div class="t">Valheim</div><div><img class="e" src="emojis/check.png" alt=""> <b>Je viens</b> · Inès, Théo, Lucas<br><img class="e" src="emojis/maybe.png" alt=""> <b>Peut-être</b> · Sarah<br><span class="m">1 place libre sur 4</span></div></div>
@@ -99,45 +160,47 @@
 <div class="who"><img class="ava" src="logo-96.png" alt=""><b>La Squad</b> · message privé</div>
 <div class="embed"><div class="k"><img class="e" src="emojis/bell.png" alt=""> Rappel · dans 30 min</div><div><b>Valheim</b> commence à 21 h avec Inès, Théo et Lucas.</div></div>
 </figure>
+          <img class="mascot right flip" src="loutre/megaphone.webp" alt="" width="434" height="560" loading="lazy">
         </div>
       </div>
     </section>
 
     <section class="feat">
       <div class="wrap">
-        <div class="txt">
-          <span class="num">03</span>
+        <div class="txt reveal">
+          <span class="kick"><img class="e" src="emojis/target.png" alt="">/profil</span>
           <h2>La carte de chaque joueur</h2>
-          <p><code>/profil</code> montre à quoi joue un pote en ce moment, ses genres préférés, sa prochaine soirée et vos jeux en commun.</p>
-          <ul>
+          <p>À quoi joue un pote en ce moment, ses genres préférés, sa prochaine soirée et vos jeux en commun.</p>
+          <ul class="checks">
             <li><img class="e" src="emojis/check.png" alt=""><span>Steam, Game Pass, Epic, Battle.net, Riot</span></li>
             <li><img class="e" src="emojis/check.png" alt=""><span>Les jeux prêtés par ta famille Steam comptent</span></li>
             <li><img class="e" src="emojis/check.png" alt=""><span>Tu choisis ce que les autres voient</span></li>
           </ul>
         </div>
-        <div class="media">
+        <div class="visual reveal-r">
 <figure class="shot" aria-label="Exemple : carte /profil">
 <div class="who"><span class="ava a3"></span><b>Lucas</b> a utilisé <span class="slash">/profil</span></div>
 <div class="embed v2"><div class="t">Lucas</div><div class="s"><img class="e" src="emojis/square_blue.png" alt=""> Steam : <span class="lk">lucas_fr</span><br><img class="e" src="emojis/square.png" alt=""> Game Pass : <img class="e" src="emojis/check.png" alt="oui"></div><hr><div class="s"><img class="e" src="emojis/pad.png" alt=""> Joue en ce moment à <b>Helldivers 2</b><br><img class="e" src="emojis/target.png" alt=""> Action · Coop · Survie</div><hr><div class="s"><img class="e" src="emojis/cal.png" alt=""> Prochaine soirée : <span class="lk">Valheim</span> · samedi 21 h<br><img class="e" src="emojis/people.png" alt=""> <b>12 jeux</b> en commun avec toi</div>
 <div class="gallery"><div class="tile g3">HELLDIVERS 2</div><div class="tile g2">VALHEIM</div><div class="tile g1">DEEP ROCK</div><div class="tile g4">LETHAL CO.</div></div></div>
 </figure>
+          <img class="mascot left" src="loutre/telephone.webp" alt="" width="437" height="560" loading="lazy">
         </div>
       </div>
     </section>
 
-    <section class="feat rev">
+    <section class="feat rev" id="promos">
       <div class="wrap">
-        <div class="txt">
-          <span class="num">04</span>
-          <h2>Les promos qui comptent pour vous</h2>
+        <div class="txt reveal">
+          <span class="kick"><img class="e" src="emojis/gift.png" alt="">Promos et jeux offerts</span>
+          <h2>Les bons plans qui comptent pour vous</h2>
           <p>Quand un jeu qui manque à une partie de la squad baisse, le salon est prévenu. Et toi en message privé pour ta liste de souhaits Steam.</p>
-          <ul>
+          <ul class="checks">
             <li><img class="e" src="emojis/check.png" alt=""><span>Les jeux offerts sur Epic, Steam, GOG… chaque jeudi</span></li>
             <li><img class="e" src="emojis/check.png" alt=""><span>Les admins choisissent le salon</span></li>
             <li><img class="e" src="emojis/check.png" alt=""><span>Seulement les jeux qui vous concernent</span></li>
           </ul>
         </div>
-        <div class="media">
+        <div class="visual reveal-l">
 <figure class="shot" aria-label="Exemple : alerte promo et jeux offerts">
 <div class="who"><img class="ava" src="logo-96.png" alt=""><b>La Squad</b> · #bons-plans</div>
 <div class="embed"><div class="k"><img class="e" src="emojis/fire.png" alt=""> Promo · il manque à 2 joueurs de la squad</div><div class="t">Lethal Company <span class="price">−40 %</span></div><div>5,99 € au lieu de 9,99 €<br>Sarah et Lucas ne l'ont pas</div></div>
@@ -145,6 +208,7 @@
 <div class="who"><img class="ava" src="logo-96.png" alt=""><b>La Squad</b> · #bons-plans</div>
 <div class="embed"><div class="k"><img class="e" src="emojis/gift.png" alt=""> Offerts cette semaine</div><div><b>Epic</b> · Hades · <b>Steam</b> · Brotato</div></div>
 </figure>
+          <img class="mascot right flip" src="loutre/clin.webp" alt="" width="385" height="560" loading="lazy">
         </div>
       </div>
     </section>
@@ -152,30 +216,20 @@
 
     <section class="block">
       <div class="wrap">
-        <h2 class="h2">Et aussi</h2>
+        <div class="sec-head peek reveal"><h2 class="h2">Et aussi</h2><img class="flip" src="loutre/pizza.webp" alt="" width="416" height="600" loading="lazy"></div>
         <div class="minis">
-          <div class="mini"><img class="e" src="emojis/search.png" alt=""><code>/jeu</code><p>La fiche d'un jeu : description, prix, avis Steam et qui l'a déjà.</p></div>
-          <div class="mini"><img class="e" src="emojis/trophy.png" alt=""><code>/recap</code><p>Le récap du mois : soirées, jeux joués et MVP de la squad.</p></div>
-          <div class="mini"><img class="e" src="emojis/fire.png" alt=""><code>/nouveautes</code><p>Les nouveautés, tendances et sorties Steam du moment.</p></div>
-          <div class="mini"><img class="e" src="emojis/cal.png" alt=""><code>/messoirees</code><p>Tes soirées à venir, sur tous tes serveurs.</p></div>
+          <div class="mini reveal"><img class="e" src="emojis/search.png" alt=""><code>/jeu</code><p>La fiche d'un jeu : description, prix, avis Steam et qui l'a déjà.</p></div>
+          <div class="mini reveal"><img class="e" src="emojis/trophy.png" alt=""><code>/recap</code><p>Le récap du mois : soirées, jeux joués et MVP de la squad.</p></div>
+          <div class="mini reveal"><img class="e" src="emojis/fire.png" alt=""><code>/nouveautes</code><p>Les nouveautés, tendances et sorties Steam du moment.</p></div>
+          <div class="mini reveal"><img class="e" src="emojis/cal.png" alt=""><code>/messoirees</code><p>Tes soirées à venir, sur tous tes serveurs.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="block">
-      <div class="wrap">
-        <h2 class="h2">Prêt en 3 étapes</h2>
-        <ol class="steps">
-          <li><h3>Ajoute le bot</h3><p>«&nbsp;Ajouter à Discord&nbsp;», puis choisis ton serveur.</p></li>
-          <li><h3>Relie ton Steam</h3><p>Chacun tape <code>/profil</code> et se connecte avec Steam.</p></li>
-          <li><h3>Rejoignez le vocal</h3><p>Tapez <code>/nosjeux</code> et choisissez.</p></li>
-        </ol>
-      </div>
-    </section>
 
     <section class="block" id="commandes">
       <div class="wrap cols">
-        <div>
+        <div class="reveal">
           <h2 class="h2">Les commandes</h2>
           <dl class="commands">
             <dt><code>/nosjeux</code></dt><dd>Les jeux multijoueurs que tout le salon vocal possède, un à la fois ou en liste, avec des filtres et un tirage au sort.</dd>
@@ -190,8 +244,8 @@
             <dt><code>/reglages</code></dt><dd>Pour les admins : alertes promo, récap du mois, soirées et accès.</dd>
           </dl>
         </div>
-        <div id="questions">
-          <h2 class="h2">Questions</h2>
+        <div id="questions" class="reveal">
+          <div class="faq-head"><img src="loutre/surpris.webp" alt="" width="303" height="440" loading="lazy"><h2 class="h2">Questions</h2></div>
           <div class="faq">
             <details><summary>Le bot a-t-il accès à mon compte Steam&nbsp;?</summary><p>Non. Tu te connectes sur la page officielle de Steam, qui confirme seulement que le compte est à toi. Le bot lit ensuite tes informations publiques (pseudo et liste de jeux) et ne voit jamais ton mot de passe.</p></details>
             <details><summary>Le bot ne voit aucun de mes jeux, pourquoi&nbsp;?</summary><p>Tes détails de jeux sont sûrement privés. Sur Steam&nbsp;: ton profil, Modifier le profil, Paramètres de confidentialité, puis «&nbsp;Détails des jeux&nbsp;: Public&nbsp;». Le bot relit ta bibliothèque tout seul dans les 12 h.</p></details>
@@ -205,20 +259,27 @@
 
     <section class="end">
       <div class="wrap">
-        <h2>Prêts pour la prochaine soirée&nbsp;?</h2>
-        <a class="btn" href="https://discord.com/oauth2/authorize?client_id=1562905950069727302&amp;scope=bot+applications.commands&amp;permissions=19456">Ajouter à Discord</a>
+        <div class="cta reveal">
+          <div>
+            <h2>Prêts pour la prochaine soirée&nbsp;?</h2>
+            <p>Ajoute La Squad à ton serveur et lance <code>/nosjeux</code> ce soir.</p>
+            <a class="btn" href="https://discord.com/oauth2/authorize?client_id=1562905950069727302&amp;scope=bot+applications.commands&amp;permissions=19456">Ajouter à Discord</a>
+          </div>
+          <img class="flip" src="loutre/course.webp" alt="" width="517" height="600" loading="lazy">
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="wrap">
-      <div>
+      <a class="logo" href="index.html"><img src="logo-96.png" alt="" width="32" height="32">La Squad</a>
+      <div class="links">
         <a href="cgu.html">Conditions d'utilisation</a>
         <a href="confidentialite.html">Confidentialité</a>
         <a href="cgu.html#mentions-legales">Mentions légales</a>
       </div>
-      <div>La Squad n'est pas affilié à Discord, Valve, Microsoft ni aux éditeurs cités.</div>
+      <div class="small">La Squad n'est pas affilié à Discord, Valve, Microsoft ni aux éditeurs cités.</div>
     </div>
   </footer>
 </body>
