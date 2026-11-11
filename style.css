@@ -63,12 +63,6 @@ code { font-family: var(--mono); font-size: .86em; background: #0d0a13; color: v
 .btn.ghost:hover { background: #30263f; box-shadow: 0 12px 28px -10px rgba(0, 0, 0, .7); }
 .btn.small { padding: 9px 16px; font-size: 15px; }
 
-/* ------------------------------------------------------- bandeau du haut */
-.promo { background: linear-gradient(90deg, var(--violet-d), #b14fd8 50%, var(--orange)); color: #fff; font-weight: 700; font-size: 15px; }
-.promo .wrap { display: flex; justify-content: center; align-items: center; gap: 12px 16px; flex-wrap: wrap; padding-block: 10px; text-align: center; }
-.promo a { background: #fff; color: var(--violet-d); padding: 3px 12px; border-radius: 6px; font-size: 14px; transition: transform .2s var(--ease); }
-.promo a:hover { transform: translateY(-1px) scale(1.04); }
-
 /* ---------------------------------------------------------------- en-tête */
 header.top { position: sticky; top: 0; z-index: 10; background: rgba(18, 14, 26, .9); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 header.top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-block: 14px; }
@@ -274,6 +268,11 @@ footer .small { flex-basis: 100%; font-size: 13px; }
 @keyframes from-l { from { opacity: 0; transform: translateX(-70px); } to { opacity: 1; transform: none; } }
 @keyframes from-r { from { opacity: 0; transform: translateX(70px); } to { opacity: 1; transform: none; } }
 @keyframes pop { from { opacity: 0; transform: translateY(30px) scale(.92); } to { opacity: 1; transform: none; } }
+/* Versions « au défilement » : plus d'amplitude, pour qu'on voie bien le mouvement */
+@keyframes s-up { from { opacity: 0; transform: translateY(90px); } to { opacity: 1; transform: none; } }
+@keyframes s-l { from { opacity: 0; transform: translateX(-160px); } to { opacity: 1; transform: none; } }
+@keyframes s-r { from { opacity: 0; transform: translateX(160px); } to { opacity: 1; transform: none; } }
+@keyframes s-pop { from { opacity: 0; transform: translateY(70px) scale(.8); } to { opacity: 1; transform: none; } }
 
 @media (prefers-reduced-motion: no-preference) {
   /* Au chargement : le titre, le texte et les boutons montent l'un après l'autre, puis les loutres arrivent */
@@ -287,10 +286,20 @@ footer .small { flex-basis: 100%; font-size: 13px; }
 
   /* En défilant : chaque bloc apparaît quand il entre à l'écran */
   @supports (animation-timeline: view()) {
-    .reveal, .reveal-l, .reveal-r { animation: up both var(--out); animation-timeline: view(); animation-range: entry 0% cover 35%; }
-    .reveal-l { animation-name: from-l; }
-    .reveal-r { animation-name: from-r; }
-    .mascot { animation: pop both var(--out); animation-timeline: view(); animation-range: entry 10% cover 40%; }
+    /* Le mouvement suit le défilement (vitesse constante, pas d'accélération au début) et s'étale
+       jusqu'à ce que le bloc arrive vers le milieu de l'écran */
+    .reveal, .reveal-l, .reveal-r { animation: s-up both linear; animation-timeline: view(); animation-range: entry 0% cover 50%; }
+    .reveal-l { animation-name: s-l; }
+    .reveal-r { animation-name: s-r; }
+    .mascot { animation: s-pop both linear; animation-timeline: view(); animation-range: entry 20% cover 55%; }
+    /* Les cartes d'une même rangée arrivent l'une après l'autre */
+    .minis .mini:nth-child(2), .steps li:nth-child(2) { animation-range: entry 15% cover 58%; }
+    .minis .mini:nth-child(3), .steps li:nth-child(3) { animation-range: entry 30% cover 66%; }
+    .minis .mini:nth-child(4) { animation-range: entry 45% cover 74%; }
+    /* Les points cochés glissent un par un */
+    .checks li { animation: s-l both linear; animation-timeline: view(); animation-range: entry 10% cover 45%; }
+    .checks li:nth-child(2) { animation-range: entry 25% cover 52%; }
+    .checks li:nth-child(3) { animation-range: entry 40% cover 59%; }
   }
 }
 
@@ -322,7 +331,6 @@ footer .small { flex-basis: 100%; font-size: 13px; }
   .minis { grid-template-columns: 1fr; }
   .commands { grid-template-columns: 1fr; gap: 2px; }
   .commands dd { margin-bottom: 10px; }
-  .promo { font-size: 14px; }
 }
 
 /* Moins d'animations si l'ordinateur le demande */
