@@ -157,8 +157,10 @@ h1 { font-size: clamp(42px, 5.6vw, 76px); line-height: 1.02; margin: 0 0 22px; f
 .mascot { position: absolute; bottom: -12px; width: auto; height: 62%; max-height: 300px; filter: drop-shadow(0 16px 20px rgba(0, 0, 0, .5)); z-index: 2; pointer-events: none; }
 .mascot.left { left: -12%; }
 .mascot.right { right: -12%; }
-.squad .mascot { height: 56%; left: -14%; }
-.squad .shot { margin-inline: 14% 2%; }
+/* Le principe : la loutre est assise sur le haut de la capture, elle ne cache rien */
+.squad .visual { display: flex; flex-direction: column; }
+.squad .mascot { position: static; order: -1; height: 190px; align-self: flex-start; margin: 0 0 -6px 10%; }
+.squad .shot { margin-inline: 4% 8%; }
 .feat .shot { margin-inline: 12% 4%; }
 .feat.rev .shot { margin-inline: 4% 12%; }
 
