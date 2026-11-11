@@ -228,19 +228,24 @@ section.block .wrap { padding-block: 88px; border-top: 1px solid var(--line); }
 .steps p { margin: 0; color: var(--muted); font-size: 15px; }
 .steps-otter { order: -1; width: auto; height: 270px; margin: 0 -8px -88px -12px; filter: drop-shadow(0 16px 20px rgba(0, 0, 0, .5)); }
 
-.cols { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; }
-.commands { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 12px 18px; align-items: baseline; }
+/* Les commandes : deux colonnes de lignes « commande · description » */
+.commands { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 56px; }
+.cmd { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 16px; align-items: baseline; padding-block: 14px; border-bottom: 1px solid var(--line); }
 .commands dd { margin: 0; color: var(--muted); font-size: 15px; }
 .commands dt code { display: inline-block; transition: transform .2s var(--ease); }
 .commands dt:hover code { transform: translateX(3px); }
-.faq-head, .sec-head { display: flex; align-items: end; justify-content: space-between; gap: 16px; }
-.faq-head { justify-content: flex-start; gap: 10px; }
-.faq-head img { margin-left: -14px; }
+.sec-head { display: flex; align-items: end; justify-content: space-between; gap: 16px; }
 /* « Et aussi » : la loutre passe la tête derrière la dernière carte */
 .sec-head.peek img { height: 170px; margin: 0 4% -78px 0; position: relative; z-index: 0; }
 .minis { position: relative; z-index: 1; }
-.faq-head .h2, .sec-head .h2 { margin-bottom: 32px; }
-.faq-head img, .sec-head img { width: auto; height: 120px; margin-bottom: -6px; }
+.sec-head .h2 { margin-bottom: 32px; }
+.sec-head img { width: auto; height: 120px; margin-bottom: -6px; }
+/* Questions : titre et loutre à gauche, réponses à droite */
+.faq-wrap { display: grid; grid-template-columns: minmax(0, .75fr) minmax(0, 1.25fr); gap: 56px; align-items: start; }
+.faq-side { display: grid; gap: 4px; justify-items: start; }
+.faq-side .h2 { margin-bottom: 8px; }
+.faq-side p { margin: 0; color: var(--muted); max-width: 26ch; }
+.faq-side img { width: auto; height: 230px; margin-top: 20px; filter: drop-shadow(0 16px 20px rgba(0, 0, 0, .5)); }
 .faq { display: grid; gap: 10px; }
 details { border: 1px solid var(--line); border-radius: 12px; background: var(--paper); transition: border-color .2s, transform .2s var(--ease); }
 details:hover { border-color: #3d3156; transform: translateY(-1px); }
@@ -322,7 +327,9 @@ footer .foot-col a::after { display: none; }   /* pas le soulignement animé des
   .foot-brand { grid-column: 1 / -1; }
   .phares-grid { grid-template-columns: 1fr; }
   .phares .wrap { padding-block: 64px 8px; }
-  .hero > .wrap, .feat .wrap, .cols { grid-template-columns: 1fr; gap: 40px; }
+  .hero > .wrap, .feat .wrap, .faq-wrap { grid-template-columns: 1fr; gap: 40px; }
+  .commands { grid-template-columns: 1fr; }
+  .faq-side img { display: none; }
   .hero > .wrap { padding-top: 48px; }
   .hero-txt { padding-bottom: 0; }
   .scene { width: min(560px, 100%); justify-self: center; }
@@ -350,8 +357,7 @@ footer .foot-col a::after { display: none; }   /* pas le soulignement animé des
   .cta > div { padding-bottom: 0; }
   .cta img { height: 200px; justify-self: end; }
   .minis { grid-template-columns: 1fr; }
-  .commands { grid-template-columns: 1fr; gap: 2px; }
-  .commands dd { margin-bottom: 10px; }
+  .cmd { grid-template-columns: 1fr; gap: 4px; }
 }
 
 /* Moins d'animations si l'ordinateur le demande */

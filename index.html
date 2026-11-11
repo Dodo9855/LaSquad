@@ -21,7 +21,7 @@
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preload" href="polices/archivo.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="loutre/canape.webp" as="image">
-  <link rel="stylesheet" href="style.css?v=15">
+  <link rel="stylesheet" href="style.css?v=16">
   <script src="anim.js?v=3"></script>
 </head>
 <body>
@@ -241,31 +241,36 @@
 
 
     <section class="block" id="commandes">
-      <div class="wrap cols">
-        <div class="reveal">
-          <h2 class="h2">Les commandes</h2>
-          <dl class="commands">
-            <dt><code>/nosjeux</code></dt><dd>Les jeux multijoueurs que tout le salon vocal possède, un à la fois ou en liste, avec des filtres et un tirage au sort.</dd>
-            <dt><code>/soiree</code></dt><dd>Organise une soirée sur un jeu : réponses en un clic, invitations en privé, rappel avant le début.</dd>
-            <dt><code>/messoirees</code></dt><dd>Tes soirées à venir sur tous tes serveurs.</dd>
-            <dt><code>/jeu</code></dt><dd>La fiche d'un jeu et qui l'a dans ta squad.</dd>
-            <dt><code>/profil</code></dt><dd>Ta carte de joueur, tes comptes et tes réglages, ou la carte d'un pote.</dd>
-            <dt><code>/nouveautes</code></dt><dd>Les nouveautés, tendances et jeux offerts du moment.</dd>
-            <dt><code>/recap</code></dt><dd>Le récap du mois de la squad, publié tout seul chaque 1er du mois.</dd>
-            <dt><code>/aide</code></dt><dd>Le mode d'emploi, par thème.</dd>
-            <dt><code>/mesdonnees</code></dt><dd>Efface toutes tes données, tout de suite.</dd>
-            <dt><code>/reglages</code></dt><dd>Pour les admins : alertes promo, récap du mois, soirées et accès.</dd>
-          </dl>
+      <div class="wrap">
+        <h2 class="h2 reveal">Les commandes</h2>
+        <dl class="commands reveal">
+            <div class="cmd"><dt><code>/nosjeux</code></dt><dd>Les jeux multijoueurs que tout le salon vocal possède, un à la fois ou en liste, avec des filtres et un tirage au sort.</dd></div>
+            <div class="cmd"><dt><code>/soiree</code></dt><dd>Organise une soirée sur un jeu : réponses en un clic, invitations en privé, rappel avant le début.</dd></div>
+            <div class="cmd"><dt><code>/messoirees</code></dt><dd>Tes soirées à venir sur tous tes serveurs.</dd></div>
+            <div class="cmd"><dt><code>/jeu</code></dt><dd>La fiche d'un jeu et qui l'a dans ta squad.</dd></div>
+            <div class="cmd"><dt><code>/profil</code></dt><dd>Ta carte de joueur, tes comptes et tes réglages, ou la carte d'un pote.</dd></div>
+            <div class="cmd"><dt><code>/nouveautes</code></dt><dd>Les nouveautés, tendances et jeux offerts du moment.</dd></div>
+            <div class="cmd"><dt><code>/recap</code></dt><dd>Le récap du mois de la squad, publié tout seul chaque 1er du mois.</dd></div>
+            <div class="cmd"><dt><code>/aide</code></dt><dd>Le mode d'emploi, par thème.</dd></div>
+            <div class="cmd"><dt><code>/mesdonnees</code></dt><dd>Efface toutes tes données, tout de suite.</dd></div>
+            <div class="cmd"><dt><code>/reglages</code></dt><dd>Pour les admins : alertes promo, récap du mois, soirées et accès.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="block" id="questions">
+      <div class="wrap faq-wrap">
+        <div class="faq-side reveal-l">
+          <h2 class="h2">Questions</h2>
+          <p>Les réponses aux questions qu'on nous pose le plus.</p>
+          <img src="loutre/surpris.webp" alt="" width="303" height="440" loading="lazy">
         </div>
-        <div id="questions" class="reveal">
-          <div class="faq-head"><img src="loutre/surpris.webp" alt="" width="303" height="440" loading="lazy"><h2 class="h2">Questions</h2></div>
-          <div class="faq">
+        <div class="faq reveal-r">
             <details><summary>Le bot a-t-il accès à mon compte Steam&nbsp;?</summary><p>Non. Tu te connectes sur la page officielle de Steam, qui confirme seulement que le compte est à toi. Le bot lit ensuite tes informations publiques (pseudo et liste de jeux) et ne voit jamais ton mot de passe.</p></details>
             <details><summary>Le bot ne voit aucun de mes jeux, pourquoi&nbsp;?</summary><p>Tes détails de jeux sont sûrement privés. Sur Steam&nbsp;: ton profil, Modifier le profil, Paramètres de confidentialité, puis «&nbsp;Détails des jeux&nbsp;: Public&nbsp;». Le bot relit ta bibliothèque tout seul dans les 12 h.</p></details>
             <details><summary>Le bot écoute-t-il le salon vocal&nbsp;?</summary><p>Non. Il regarde seulement qui est connecté au salon quand tu tapes une commande. Il n'écoute rien et ne lit pas vos messages.</p></details>
             <details><summary>Game Pass et Steam, ça marche ensemble&nbsp;?</summary><p>Seulement si le jeu propose le crossplay entre Steam et Xbox. Vérifie sur la page du jeu.</p></details>
             <details><summary>Comment supprimer mes données&nbsp;?</summary><p>Tape <code>/mesdonnees</code>&nbsp;: tout est effacé tout de suite. Voir aussi la <a href="confidentialite.html">politique de confidentialité</a>.</p></details>
-          </div>
         </div>
       </div>
     </section>
