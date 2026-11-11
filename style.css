@@ -252,7 +252,7 @@ details[open] summary { color: var(--gold); }
 details p { margin: 0; padding: 0 18px 16px; color: var(--muted); font-size: 15px; }
 details a { color: var(--gold); }
 
-.end .wrap { padding-block: 40px 96px; }
+.end .wrap { padding-block: 40px; }
 .cta { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 24px; border-radius: 24px; padding: 56px 56px 0; background: radial-gradient(80% 120% at 100% 100%, rgba(255, 122, 26, .45), transparent 60%), linear-gradient(120deg, #5b21b6, var(--violet-d) 55%, #9b4fd6); overflow: hidden; }
 .cta > div { padding-bottom: 56px; }
 .cta h2 { margin: 0 0 10px; font-size: clamp(30px, 3.6vw, 48px); font-weight: 850; line-height: 1.05; text-wrap: balance; }
@@ -261,14 +261,19 @@ details a { color: var(--gold); }
 .cta img { width: auto; height: 300px; margin-right: 12px; filter: drop-shadow(0 18px 22px rgba(0, 0, 0, .4)); }
 
 /* --------------------------------------------------------------- bas de page */
-footer { border-top: 1px solid var(--line); background: var(--night-2); }
-footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px 32px; flex-wrap: wrap; padding-block: 28px; color: var(--muted); font-size: 14px; }
-footer .logo { font-size: 18px; color: var(--text); }
-footer .logo img { width: 32px; height: 32px; }
-footer .links { display: flex; gap: 8px 20px; flex-wrap: wrap; }
-footer .links a { color: var(--muted); transition: color .2s; }
-footer .links a:hover { color: var(--text); }
-footer .small { flex-basis: 100%; font-size: 13px; }
+/* La loutre allongée avec sa manette est posée sur le bord du haut */
+footer { position: relative; margin-top: 120px; border-top: 1px solid var(--line); background: linear-gradient(180deg, #17112a, var(--night-2) 70%); }
+.foot-otter { position: absolute; right: max(6%, calc(50% - 560px)); bottom: calc(100% - 14px); width: 230px; height: auto; filter: drop-shadow(0 12px 16px rgba(0, 0, 0, .5)); pointer-events: none; }
+.foot-main { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr)); gap: 40px; padding-block: 56px 40px; }
+.foot-brand { display: grid; gap: 14px; align-content: start; justify-items: start; }
+.foot-brand p { margin: 0; color: var(--muted); font-size: 15px; max-width: 28ch; }
+footer .logo { font-size: 22px; color: var(--text); }
+.foot-col { display: grid; gap: 10px; align-content: start; font-size: 15px; }
+.foot-col h2 { margin: 0 0 4px; font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--text); }
+.foot-col a { color: var(--muted); justify-self: start; transition: color .2s, translate .2s var(--ease); }
+.foot-col a:hover { color: var(--text); translate: 3px 0; }
+footer .foot-col a::after { display: none; }   /* pas le soulignement animé des liens du haut */
+.foot-bottom { display: flex; justify-content: space-between; gap: 8px 32px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-block: 20px 28px; color: #8f84a6; font-size: 13px; }
 
 /* ------------------------------------------------------- pages légales */
 .legal { max-width: 46rem; margin: 0 auto; padding: 32px max(16px, env(safe-area-inset-right, 0px)) 64px max(16px, env(safe-area-inset-left, 0px)); }
@@ -313,6 +318,8 @@ footer .small { flex-basis: 100%; font-size: 13px; }
 
 /* ----------------------------------------------------------------- téléphone */
 @media (max-width: 960px) {
+  .foot-main { grid-template-columns: 1fr 1fr; }
+  .foot-brand { grid-column: 1 / -1; }
   .phares-grid { grid-template-columns: 1fr; }
   .phares .wrap { padding-block: 64px 8px; }
   .hero > .wrap, .feat .wrap, .cols { grid-template-columns: 1fr; gap: 40px; }
@@ -330,6 +337,8 @@ footer .small { flex-basis: 100%; font-size: 13px; }
   nav a.hide-mobile { display: none; }
 }
 @media (max-width: 640px) {
+  .foot-otter { width: 160px; }
+  .foot-main { gap: 28px; }
   .une { position: static; justify-self: start; }
   .notif:nth-child(2) { margin-left: 0; }
   .skyline { height: 120px; }
