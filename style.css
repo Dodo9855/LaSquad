@@ -280,13 +280,16 @@ footer .small { flex-basis: 100%; font-size: 13px; }
   .scene .canape { animation-delay: .25s; }
 
 /* En défilant : chaque bloc se cache tant qu'il n'est pas à l'écran, puis s'anime tout seul quand il arrive
-   (anim.js ajoute « anim » à la page, puis « vu » à chaque bloc qui entre à l'écran) */
+   (anim.js ajoute « anim » à la page, « vu » à chaque bloc à l'écran, et « haut » à ceux sortis par le haut) */
 .anim .reveal, .anim .reveal-l, .anim .reveal-r, .anim .mascot, .anim .checks li {
   opacity: 0; transition: opacity .9s ease, transform 1.1s var(--out); }
 .anim .reveal { transform: translateY(60px); }
 .anim .reveal-l, .anim .checks li { transform: translateX(-90px); }
 .anim .reveal-r { transform: translateX(90px); }
 .anim .mascot { transform: translateY(50px) scale(.85); transition-delay: .25s; }
+/* Sorti par le haut de l'écran : il redescend quand on remonte */
+.anim .reveal.haut { transform: translateY(-60px); }
+.anim .mascot.haut { transform: translateY(-50px) scale(.85); }
 .anim .vu, .anim .checks li.vu { opacity: 1; transform: none; }
 /* Les cartes d'une même rangée et les points cochés arrivent l'un après l'autre */
 .anim .minis .mini:nth-child(2), .anim .steps li:nth-child(2), .anim .checks li:nth-child(2) { transition-delay: .15s; }
