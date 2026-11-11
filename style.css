@@ -239,7 +239,7 @@ section.block .wrap { padding-block: 88px; border-top: 1px solid var(--line); }
 .faq { display: grid; gap: 10px; }
 details { border: 1px solid var(--line); border-radius: 12px; background: var(--paper); transition: border-color .2s, transform .2s var(--ease); }
 details:hover { border-color: #3d3156; transform: translateY(-1px); }
-summary { cursor: pointer; font-weight: 750; list-style: none; display: flex; justify-content: space-between; gap: 12px; padding: 14px 18px; }
+summary { cursor: pointer; user-select: none; -webkit-user-select: none; font-weight: 750; list-style: none; display: flex; justify-content: space-between; gap: 12px; padding: 14px 18px; }
 summary::-webkit-details-marker { display: none; }
 summary::after { content: "+"; color: var(--orange); font-weight: 900; font-size: 20px; line-height: 1.2; transition: transform .25s var(--ease); }
 details[open] summary::after { transform: rotate(45deg); }
