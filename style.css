@@ -1,7 +1,7 @@
 /* La Squad : site sur le modèle des sites de bots (MEE6), avec la loutre.
    Un seul thème, sombre, voulu. Polices hébergées ici (licence OFL, voir polices/).
-   Les éléments apparaissent en défilant grâce au CSS seul (animation-timeline) : sans prise en charge
-   du navigateur, ou si l'ordinateur demande moins d'animations, tout est simplement affiché.
+   Les éléments apparaissent quand ils arrivent à l'écran grâce à anim.js : sans ce script, ou si
+   l'ordinateur demande moins d'animations, tout est simplement affiché.
    Après une modification : augmenter le ?v= de style.css dans les 3 pages (sinon le navigateur garde l'ancienne). */
 
 @font-face {
@@ -268,11 +268,6 @@ footer .small { flex-basis: 100%; font-size: 13px; }
 @keyframes from-l { from { opacity: 0; transform: translateX(-70px); } to { opacity: 1; transform: none; } }
 @keyframes from-r { from { opacity: 0; transform: translateX(70px); } to { opacity: 1; transform: none; } }
 @keyframes pop { from { opacity: 0; transform: translateY(30px) scale(.92); } to { opacity: 1; transform: none; } }
-/* Versions « au défilement » : plus d'amplitude, pour qu'on voie bien le mouvement */
-@keyframes s-up { from { opacity: 0; transform: translateY(90px); } to { opacity: 1; transform: none; } }
-@keyframes s-l { from { opacity: 0; transform: translateX(-160px); } to { opacity: 1; transform: none; } }
-@keyframes s-r { from { opacity: 0; transform: translateX(160px); } to { opacity: 1; transform: none; } }
-@keyframes s-pop { from { opacity: 0; transform: translateY(70px) scale(.8); } to { opacity: 1; transform: none; } }
 
 @media (prefers-reduced-motion: no-preference) {
   /* Au chargement : le titre, le texte et les boutons montent l'un après l'autre, puis les loutres arrivent */
@@ -284,23 +279,19 @@ footer .small { flex-basis: 100%; font-size: 13px; }
   .scene .o { animation: pop .9s var(--out) both; }
   .scene .canape { animation-delay: .25s; }
 
-  /* En défilant : chaque bloc apparaît quand il entre à l'écran */
-  @supports (animation-timeline: view()) {
-    /* Le mouvement suit le défilement (vitesse constante, pas d'accélération au début) et s'étale
-       jusqu'à ce que le bloc arrive vers le milieu de l'écran */
-    .reveal, .reveal-l, .reveal-r { animation: s-up both linear; animation-timeline: view(); animation-range: entry 0% cover 50%; }
-    .reveal-l { animation-name: s-l; }
-    .reveal-r { animation-name: s-r; }
-    .mascot { animation: s-pop both linear; animation-timeline: view(); animation-range: entry 20% cover 55%; }
-    /* Les cartes d'une même rangée arrivent l'une après l'autre */
-    .minis .mini:nth-child(2), .steps li:nth-child(2) { animation-range: entry 15% cover 58%; }
-    .minis .mini:nth-child(3), .steps li:nth-child(3) { animation-range: entry 30% cover 66%; }
-    .minis .mini:nth-child(4) { animation-range: entry 45% cover 74%; }
-    /* Les points cochés glissent un par un */
-    .checks li { animation: s-l both linear; animation-timeline: view(); animation-range: entry 10% cover 45%; }
-    .checks li:nth-child(2) { animation-range: entry 25% cover 52%; }
-    .checks li:nth-child(3) { animation-range: entry 40% cover 59%; }
-  }
+/* En défilant : chaque bloc se cache tant qu'il n'est pas à l'écran, puis s'anime tout seul quand il arrive
+   (anim.js ajoute « anim » à la page, puis « vu » à chaque bloc qui entre à l'écran) */
+.anim .reveal, .anim .reveal-l, .anim .reveal-r, .anim .mascot, .anim .checks li {
+  opacity: 0; transition: opacity .9s ease, transform 1.1s var(--out); }
+.anim .reveal { transform: translateY(60px); }
+.anim .reveal-l, .anim .checks li { transform: translateX(-90px); }
+.anim .reveal-r { transform: translateX(90px); }
+.anim .mascot { transform: translateY(50px) scale(.85); transition-delay: .25s; }
+.anim .vu, .anim .checks li.vu { opacity: 1; transform: none; }
+/* Les cartes d'une même rangée et les points cochés arrivent l'un après l'autre */
+.anim .minis .mini:nth-child(2), .anim .steps li:nth-child(2), .anim .checks li:nth-child(2) { transition-delay: .15s; }
+.anim .minis .mini:nth-child(3), .anim .steps li:nth-child(3), .anim .checks li:nth-child(3) { transition-delay: .3s; }
+.anim .minis .mini:nth-child(4) { transition-delay: .45s; }
 }
 
 /* ----------------------------------------------------------------- téléphone */
