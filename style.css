@@ -257,18 +257,11 @@ details[open] summary { color: var(--gold); }
 details p { margin: 0; padding: 0 18px 16px; color: var(--muted); font-size: 15px; }
 details a { color: var(--gold); }
 
-.end .wrap { padding-block: 40px; }
-.cta { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 24px; border-radius: 24px; padding: 56px 56px 0; background: radial-gradient(80% 120% at 100% 100%, rgba(255, 122, 26, .45), transparent 60%), linear-gradient(120deg, #5b21b6, var(--violet-d) 55%, #9b4fd6); overflow: hidden; }
-.cta > div { padding-bottom: 56px; }
-.cta h2 { margin: 0 0 10px; font-size: clamp(30px, 3.6vw, 48px); font-weight: 850; line-height: 1.05; text-wrap: balance; }
-.cta p { margin: 0 0 26px; font-size: 18px; color: #ede4ff; }
-.cta code { background: rgba(0, 0, 0, .3); color: #fff; }
-.cta img { width: auto; height: 300px; margin-right: 12px; filter: drop-shadow(0 18px 22px rgba(0, 0, 0, .4)); }
 
 /* --------------------------------------------------------------- bas de page */
-/* La loutre allongée avec sa manette est posée sur le bord du haut, à gauche */
+/* La loutre allongée avec sa manette est posée sur le bord du haut, à droite */
 footer { position: relative; margin-top: 120px; border-top: 1px solid var(--line); background: linear-gradient(180deg, #17112a, var(--night-2) 80%); }
-.foot-otter { position: absolute; left: max(6%, calc(50% - 560px)); bottom: calc(100% - 14px); width: 230px; height: auto; filter: drop-shadow(0 12px 16px rgba(0, 0, 0, .5)); pointer-events: none; }
+.foot-otter { position: absolute; right: max(6%, calc(50% - 560px)); bottom: calc(100% - 14px); width: 230px; height: auto; filter: drop-shadow(0 12px 16px rgba(0, 0, 0, .5)); pointer-events: none; }
 .foot-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 36px; padding-block: 34px 22px; font-size: 15px; font-weight: 600; }
 .foot-links a { color: var(--muted); transition: color .2s; }
 .foot-links a:hover { color: var(--text); }
@@ -344,9 +337,6 @@ footer { position: relative; margin-top: 120px; border-top: 1px solid var(--line
   .mascot.left { left: -4%; }
   .mascot.right { right: -4%; }
   .feat .shot, .feat.rev .shot { margin-inline: 0; }
-  .cta { grid-template-columns: 1fr; padding: 36px 24px 0; }
-  .cta > div { padding-bottom: 0; }
-  .cta img { height: 200px; justify-self: end; }
   .minis { grid-template-columns: 1fr; }
   .cmd { grid-template-columns: 1fr; gap: 4px; }
 }
