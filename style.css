@@ -112,16 +112,11 @@ h1 { font-size: clamp(42px, 5.6vw, 76px); line-height: 1.02; margin: 0 0 22px; f
 .skyline .near .w3 { fill: #ff7a1a; opacity: .6; }
 .skyline .roof { fill: #34285a; }
 
-/* ------------------------------------------------- bande des plateformes */
-/* Les noms défilent en continu (4 copies de la liste ; la piste avance d'un quart pour boucler sans saut) */
-.trust { background: var(--paper); border-block: 1px solid var(--line); padding-block: 26px 30px; }
-.trust p { margin: 0 0 14px; color: var(--muted); font-size: 14px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
-.marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
-.track { display: flex; width: max-content; }
-.plats { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; }
-.plats li { display: flex; align-items: center; white-space: nowrap; font-size: clamp(22px, 2.4vw, 30px); font-weight: 850; font-stretch: 112%; letter-spacing: -.01em; color: #d9d0ec; transition: color .2s; }
-.plats li::after { content: "✦"; color: var(--orange); font-size: .6em; margin-inline: 34px; }
-.plats li:hover { color: #fff; }
+/* ------------------------------------------------- phrase d'accroche sous le haut de page */
+.trust { background: var(--paper); border-block: 1px solid var(--line); }
+.trust .wrap { display: flex; justify-content: center; align-items: center; gap: 12px 24px; padding-block: 26px; }
+.trust img { width: auto; height: 92px; flex: none; filter: drop-shadow(0 10px 14px rgba(0, 0, 0, .45)); }
+.trust p { margin: 0; font-size: clamp(22px, 2.8vw, 36px); font-weight: 850; line-height: 1.15; letter-spacing: -.01em; text-wrap: balance; }
 
 /* ------------------------------- fonctions : texte d'un côté, visuel de l'autre */
 .feat .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 72px; align-items: center; padding-block: 104px; }
@@ -264,7 +259,6 @@ footer .small { flex-basis: 100%; font-size: 13px; }
 .note { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px; }
 
 /* ---------------------------------------------------------------- animations */
-@keyframes slide { to { transform: translateX(-25%); } }
 @keyframes up { from { opacity: 0; transform: translateY(44px); } to { opacity: 1; transform: none; } }
 @keyframes from-l { from { opacity: 0; transform: translateX(-70px); } to { opacity: 1; transform: none; } }
 @keyframes from-r { from { opacity: 0; transform: translateX(70px); } to { opacity: 1; transform: none; } }
@@ -272,8 +266,6 @@ footer .small { flex-basis: 100%; font-size: 13px; }
 
 @media (prefers-reduced-motion: no-preference) {
   /* Au chargement : le titre, le texte et les boutons montent l'un après l'autre, puis les loutres arrivent */
-  .track { animation: slide 38s linear infinite; }
-  .marquee:hover .track { animation-play-state: paused; }
   .load { animation: up .9s var(--out) both; }
   .load.d1 { animation-delay: .12s; }
   .load.d2 { animation-delay: .24s; }
@@ -312,6 +304,7 @@ footer .small { flex-basis: 100%; font-size: 13px; }
   nav a.hide-mobile { display: none; }
 }
 @media (max-width: 640px) {
+  .trust img { height: 64px; }
   .skyline { height: 120px; }
   .mascot { height: 46%; }
   .mascot.left { left: -4%; }
@@ -328,9 +321,5 @@ footer .small { flex-basis: 100%; font-size: 13px; }
 /* Moins d'animations si l'ordinateur le demande */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .track { width: auto; justify-content: center; }
-  .plats { flex-wrap: wrap; justify-content: center; row-gap: 8px; }
-  .plats[aria-hidden] { display: none; }
-  .marquee { -webkit-mask-image: none; mask-image: none; }
   *, *::before, *::after { transition: none !important; }
 }
