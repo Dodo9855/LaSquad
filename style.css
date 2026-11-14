@@ -259,11 +259,12 @@ details a { color: var(--gold); }
 .cta-otter { width: 100%; max-width: 380px; height: auto; justify-self: center; filter: drop-shadow(0 16px 20px rgba(0, 0, 0, .5)); }
 .cta-txt .h2 { margin-bottom: 12px; }
 .cta-txt p { margin: 0 0 28px; color: var(--muted); font-size: 19px; }
+.cta-btns { display: flex; flex-wrap: wrap; gap: 12px; }
 
 /* --------------------------------------------------------------- bas de page */
 /* La loutre allongée avec sa manette est posée sur le bord du haut, à droite */
 footer { position: relative; margin-top: 120px; border-top: 1px solid var(--line); background: linear-gradient(180deg, #17112a, var(--night-2) 80%); }
-.foot-otter { position: absolute; right: max(6%, calc(50% - 560px)); bottom: calc(100% - 14px); width: 230px; height: auto; filter: drop-shadow(0 12px 16px rgba(0, 0, 0, .5)); pointer-events: none; }
+.foot-otter { position: absolute; right: max(6%, calc(50% - 560px)); bottom: calc(100% - 32px); width: 230px; height: auto; filter: drop-shadow(0 12px 16px rgba(0, 0, 0, .5)); pointer-events: none; }
 .foot-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 36px; padding-block: 34px 22px; font-size: 15px; font-weight: 600; }
 .foot-links a { color: var(--muted); transition: color .2s; }
 .foot-links a:hover { color: var(--text); }
@@ -323,6 +324,7 @@ footer { position: relative; margin-top: 120px; border-top: 1px solid var(--line
   .hero-bg { position: relative; order: 2; height: auto; aspect-ratio: 4 / 3; object-position: 62% center; }
   .cta-box { grid-template-columns: 1fr; padding: 32px 24px; gap: 24px; text-align: center; }
   .cta-otter { max-width: 260px; }
+  .cta-btns { justify-content: center; }
   .feat.rev .txt { order: 0; }
   .feat .wrap { padding-block: 72px; }
   .minis { grid-template-columns: 1fr 1fr; }
@@ -336,7 +338,7 @@ footer { position: relative; margin-top: 120px; border-top: 1px solid var(--line
   /* Rien ne dépasse à droite avant les animations : sur iPhone, ça élargit la page (dézoom, bande vide) */
   .visual::before { inset: 0; }
   .anim section .reveal-l, .anim section .reveal-r { transform: translateY(60px); }
-  .foot-otter { width: 160px; }
+  .foot-otter { width: 160px; bottom: calc(100% - 22px); }
   .une { position: static; justify-self: start; }
   .notif:nth-child(2) { margin-left: 0; }
   .mascot, .feat:not([id]) .mascot, #soiree .mascot, .squad .mascot { width: 120px; }
