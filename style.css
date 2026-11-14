@@ -151,7 +151,9 @@ h1 { font-size: clamp(42px, 5.6vw, 76px); line-height: 1.02; margin: 0 0 22px; f
 .feat .shot { margin-inline: 12% 4%; }
 .feat.rev .shot { margin-inline: 4% 12%; }
 
-/* Cadre de capture (rendu HTML en attendant les vraies captures) */
+/* Cadre de capture */
+.shot.pic { padding: 0; overflow: hidden; background: #1b1a1f; display: flex; flex-direction: column; }
+.shot.pic img { display: block; width: 100%; height: auto; }
 .shot { position: relative; z-index: 1; margin: 0; background: var(--discord); border: 1px solid #1e1f22; border-radius: 14px; box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .75); padding: 18px; font: 14px/1.45 "gg sans", "Noto Sans", system-ui, sans-serif; color: #dbdee1; }
 .who { display: flex; gap: 8px; align-items: center; font-size: 13px; color: #949ba4; margin-bottom: 6px; }
 .who b { color: #f2f3f5; }
